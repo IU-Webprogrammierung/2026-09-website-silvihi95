@@ -7,3 +7,26 @@
     --color-line: rgba (38, 34, 32, 0.15);
    --font-body: system-ui, "Segoe UI", Arial, sans-serif;
     }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* Hier stelle ich Grundschrift, Textfarbe und das Hintergrundbild
+   fuer die ganze Seite ein */
+body {
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--color-text);
+
+  background-image:
+    linear-gradient(rgba(247, 243, 236, 0.78), rgba(247, 243, 236, 0.78)),
+    url("../images/hintergrund.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+}
