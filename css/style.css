@@ -1,6 +1,9 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Silvia Hienz — Fotografie & mehr</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+:root {
+    --color-bg:#f7f3ec;
+    --color-text: #262220;
+    --color-text-muted: #5c5650;
+    --color-accent: #4b6355;
+    --color-accent-dark: #364a3f;
+    --color-line: rgba (38, 34, 32, 0.15);
+   --font-body: system-ui, "Segoe UI", Arial, sans-serif;
+    }
