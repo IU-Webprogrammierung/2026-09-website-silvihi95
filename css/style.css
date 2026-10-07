@@ -14,8 +14,7 @@
   margin: 0;
   padding: 0;
 }
-/* Hier stelle ich Grundschrift, Textfarbe und das Hintergrundbild
-   fuer die ganze Seite ein */
+
 body {
   font-family: var(--font-body);
   font-size: 1.0625rem;
@@ -29,4 +28,84 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  background-color: rgba(247, 243, 236, 0.92);
+  border-bottom: 1px solid var(--color-line);
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.5rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--color-accent-dark);
+  text-decoration: none;
+}
+
+/* Hamburger-Button: nur mobil sichtbar */
+.nav-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-text);
+  position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+}
+
+.hamburger::before { top: -7px; }
+.hamburger::after  { top: 7px; }
+
+
+.main-nav {
+  display: none;
+  width: 100%;
+}
+
+.main-nav.is-open {
+  display: block;
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.5rem 0;
+  color: var(--color-text);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: var(--color-accent);
 }
