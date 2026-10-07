@@ -136,6 +136,30 @@ body {
 .social-links a {
   font-weight: 500;
 }
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery img {
+  border-radius: 4px;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  width: 100%;
+}
+
+.gallery figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
 @media (min-width: 768px) {
 
   
@@ -164,5 +188,8 @@ body {
 
   .hero-text {
     max-width: 500px;
+  }
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
