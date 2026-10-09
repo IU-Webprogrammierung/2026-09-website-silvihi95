@@ -16,6 +16,10 @@
 }
 
 body {
+  html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Abstand wegen sticky Header, damit Überschriften nicht verdeckt werden */
+}
   font-family: var(--font-body);
   font-size: 1.0625rem;
   line-height: 1.65;
@@ -284,6 +288,7 @@ button:focus-visible {
 .back-to-top:hover {
   background-color: var(--color-accent-dark);
 }
+
 @media (min-width: 768px) {
 
   
