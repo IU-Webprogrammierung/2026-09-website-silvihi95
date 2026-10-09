@@ -160,6 +160,28 @@ body {
   color: var(--color-text-muted);
   text-align: center;
 }
+.travel-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.travel-item img {
+  border-radius: 4px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  width: 100%;
+  margin-bottom: 0.75rem;
+}
+
+.travel-item h3 {
+  margin-bottom: 0.3rem;
+}
+
+.travel-item p {
+  font-size: 0.95rem;
+}
 @media (min-width: 768px) {
 
   
@@ -191,5 +213,8 @@ body {
   }
   .gallery {
     grid-template-columns: repeat(4, 1fr);
+  }
+   .travel-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
