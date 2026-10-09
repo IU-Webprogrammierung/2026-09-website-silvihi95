@@ -242,6 +242,23 @@ button:focus-visible {
 .skip-link:focus {
   left: 0;
 }
+.site-footer {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-line);
+  margin-top: 2rem;
+}
+
+.site-footer a {
+  color: var(--color-text-muted);
+}
+
+.site-footer a:hover {
+  color: var(--color-accent);
+}
+
 @media (min-width: 768px) {
 
   
