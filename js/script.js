@@ -87,6 +87,7 @@ const nextButton = document.querySelector(".lightbox-next");
 let activeGallery = [];
 let currentImageIndex = 0;
 let touchStartX = null;
+let lastFocusedElement = null;
 
 if (
   lightbox &&
@@ -120,21 +121,42 @@ if (
       `${currentImageIndex + 1} / ${activeGallery.length}`;
   }
 
-  // Lightbox öffnen
-  function openLightbox(gallery, index) {
-    activeGallery = [
-      ...gallery.querySelectorAll(".gallery-button")
-    ];
+ // Lightbox öffnen
+function openLightbox(gallery, index) {
+  activeGallery = [
+    ...gallery.querySelectorAll(".gallery-button")
+  ];
 
-    showImage(index);
-    lightbox.showModal();
-    closeButton.focus();
+  // Ursprünglich fokussiertes Element merken
+  lastFocusedElement = document.activeElement;
+
+  showImage(index);
+  lightbox.showModal();
+
+  // Fokus auf den Schließen-Button setzen
+  closeButton.focus();
+}
+
+// Lightbox schließen
+function closeLightbox() {
+  lightbox.close();
+}
+
+// Tastaturfokus nach dem Schließen wiederherstellen
+lightbox.addEventListener("close", () => {
+  if (
+    lastFocusedElement &&
+    lastFocusedElement.isConnected &&
+    typeof lastFocusedElement.focus === "function"
+  ) {
+    lastFocusedElement.focus();
   }
 
-  // Lightbox schließen
-  function closeLightbox() {
-    lightbox.close();
-  }
+  lastFocusedElement = null;
+});
+
+// Alle Galerien unabhängig voneinander einrichten
+document.querySelectorAll(".gallery").forEach((gallery) => {
 
   // Alle Galerien unabhängig voneinander einrichten
   document.querySelectorAll(".gallery").forEach((gallery) => {
