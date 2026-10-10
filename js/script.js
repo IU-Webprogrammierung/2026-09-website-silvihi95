@@ -10,26 +10,26 @@ const mainNav = document.getElementById("mainNav");
 
 if (navToggle && mainNav) {
 
-  // Hamburger-Menü öffnen und schließen
-  navToggle.addEventListener("click", () => {
-    const isOpen = mainNav.classList.toggle("is-open");
+    // Hamburger-Menü öffnen und schließen
+    navToggle.addEventListener("click", () => {
+        const isOpen = mainNav.classList.toggle("is-open");
 
-    navToggle.setAttribute("aria-expanded", String(isOpen));
-    navToggle.setAttribute(
-      "aria-label",
-      isOpen ? "Menü schließen" : "Menü öffnen"
-    );
-  });
-
-  // Menü nach Auswahl eines Links schließen
-  mainNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      mainNav.classList.remove("is-open");
-
-      navToggle.setAttribute("aria-expanded", "false");
-      navToggle.setAttribute("aria-label", "Menü öffnen");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        navToggle.setAttribute(
+            "aria-label",
+            isOpen ? "Menü schließen" : "Menü öffnen"
+        );
     });
-  });
+
+    // Menü nach Auswahl eines Links schließen
+    mainNav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            mainNav.classList.remove("is-open");
+
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Menü öffnen");
+        });
+    });
 }
 
 
@@ -41,32 +41,32 @@ const backToTopBtn = document.getElementById("backToTop");
 
 if (backToTopBtn) {
 
-  // Button beim Scrollen ein- und ausblenden
-  function updateBackToTop() {
-    backToTopBtn.classList.toggle(
-      "is-visible",
-      window.scrollY > 300
-    );
-  }
+    // Button beim Scrollen ein- und ausblenden
+    function updateBackToTop() {
+        backToTopBtn.classList.toggle(
+            "is-visible",
+            window.scrollY > 300
+        );
+    }
 
-  window.addEventListener("scroll", updateBackToTop, {
-    passive: true
-  });
-
-  // Sichtbarkeit direkt beim Laden prüfen
-  updateBackToTop();
-
-  // Zurück nach oben scrollen
-  backToTopBtn.addEventListener("click", () => {
-    const reducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    window.scrollTo({
-      top: 0,
-      behavior: reducedMotion ? "auto" : "smooth"
+    window.addEventListener("scroll", updateBackToTop, {
+        passive: true
     });
-  });
+
+    // Sichtbarkeit direkt beim Laden prüfen
+    updateBackToTop();
+
+    // Zurück nach oben scrollen
+    backToTopBtn.addEventListener("click", () => {
+        const reducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        window.scrollTo({
+            top: 0,
+            behavior: reducedMotion ? "auto" : "smooth"
+        });
+    });
 }
 
 
@@ -90,145 +90,145 @@ let touchStartX = null;
 let lastFocusedElement = null;
 
 if (
-  lightbox &&
-  lightboxImage &&
-  lightboxCaption &&
-  lightboxCounter &&
-  closeButton &&
-  prevButton &&
-  nextButton
+    lightbox &&
+    lightboxImage &&
+    lightboxCaption &&
+    lightboxCounter &&
+    closeButton &&
+    prevButton &&
+    nextButton
 ) {
 
-  // Bild und Beschriftung aktualisieren
-  function showImage(index) {
-    if (activeGallery.length === 0) return;
+    // Bild und Beschriftung aktualisieren
+    function showImage(index) {
+        if (activeGallery.length === 0) return;
 
-    currentImageIndex =
-      (index + activeGallery.length) % activeGallery.length;
+        currentImageIndex =
+            (index + activeGallery.length) % activeGallery.length;
 
-    const button = activeGallery[currentImageIndex];
-    const image = button.querySelector("img");
-    const figure = button.closest("figure");
-    const caption = figure.querySelector("figcaption");
+        const button = activeGallery[currentImageIndex];
+        const image = button.querySelector("img");
+        const figure = button.closest("figure");
+        const caption = figure.querySelector("figcaption");
 
-    lightboxImage.src = image.src;
-    lightboxImage.alt = image.alt;
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
 
-    lightboxCaption.textContent =
-      caption ? caption.textContent : "";
+        lightboxCaption.textContent =
+            caption ? caption.textContent : "";
 
-    lightboxCounter.textContent =
-      `${currentImageIndex + 1} / ${activeGallery.length}`;
-  }
+        lightboxCounter.textContent =
+            `${currentImageIndex + 1} / ${activeGallery.length}`;
+    }
 
- // Lightbox öffnen
-function openLightbox(gallery, index) {
-  activeGallery = [
-    ...gallery.querySelectorAll(".gallery-button")
-  ];
+    // Lightbox öffnen
+    function openLightbox(gallery, index) {
+        activeGallery = [
+            ...gallery.querySelectorAll(".gallery-button")
+        ];
 
-  // Ursprünglich fokussiertes Element merken
-  lastFocusedElement = document.activeElement;
+        // Ursprünglich fokussiertes Element merken
+        lastFocusedElement = document.activeElement;
 
-  showImage(index);
-  lightbox.showModal();
+        showImage(index);
+        lightbox.showModal();
 
-  // Fokus auf den Schließen-Button setzen
-  closeButton.focus();
-}
+        // Fokus auf den Schließen-Button setzen
+        closeButton.focus();
+    }
 
-// Lightbox schließen
-function closeLightbox() {
-  lightbox.close();
-}
+    // Lightbox schließen
+    function closeLightbox() {
+        lightbox.close();
+    }
 
-// Tastaturfokus nach dem Schließen wiederherstellen
-lightbox.addEventListener("close", () => {
-  if (
-    lastFocusedElement &&
-    lastFocusedElement.isConnected &&
-    typeof lastFocusedElement.focus === "function"
-  ) {
-    lastFocusedElement.focus();
-  }
+    // Tastaturfokus nach dem Schließen wiederherstellen
+    lightbox.addEventListener("close", () => {
+        if (
+            lastFocusedElement &&
+            lastFocusedElement.isConnected &&
+            typeof lastFocusedElement.focus === "function"
+        ) {
+            lastFocusedElement.focus();
+        }
 
-  lastFocusedElement = null;
-});
-
-// Alle Galerien unabhängig voneinander einrichten
-document.querySelectorAll(".gallery").forEach((gallery) => {
-
-  const buttons = [
-    ...gallery.querySelectorAll(".gallery-button")
-  ];
-
-  buttons.forEach((button, index) => {
-    button.addEventListener("click", () => {
-      openLightbox(gallery, index);
+        lastFocusedElement = null;
     });
-  });
 
-});
+    // Alle Galerien unabhängig voneinander einrichten
+    document.querySelectorAll(".gallery").forEach((gallery) => {
 
- // Schließen-Button
-closeButton.addEventListener("click", closeLightbox);
+        const buttons = [
+            ...gallery.querySelectorAll(".gallery-button")
+        ];
 
-// Vorheriges Bild
-prevButton.addEventListener("click", () => {
-  showImage(currentImageIndex - 1);
-});
+        buttons.forEach((button, index) => {
+            button.addEventListener("click", () => {
+                openLightbox(gallery, index);
+            });
+        });
 
-  // Nächstes Bild
-  nextButton.addEventListener("click", () => {
-    showImage(currentImageIndex + 1);
-  });
+    });
 
-  // Tastatursteuerung
-  lightbox.addEventListener("keydown", (event) => {
+    // Schließen-Button
+    closeButton.addEventListener("click", closeLightbox);
 
-    if (event.key === "ArrowLeft") {
-      event.preventDefault();
-      showImage(currentImageIndex - 1);
-    }
-
-    if (event.key === "ArrowRight") {
-      event.preventDefault();
-      showImage(currentImageIndex + 1);
-    }
-
-  });
-
-  // Klick außerhalb des Bildbereichs
-  lightbox.addEventListener("click", (event) => {
-    if (event.target === lightbox) {
-      closeLightbox();
-    }
-  });
-
-  // Touch-Gesten auf Smartphones
-  lightbox.addEventListener("touchstart", (event) => {
-    touchStartX = event.changedTouches[0].screenX;
-  }, { passive: true });
-
-  lightbox.addEventListener("touchend", (event) => {
-
-    if (touchStartX === null) return;
-
-    const touchEndX = event.changedTouches[0].screenX;
-    const difference = touchEndX - touchStartX;
-
-    if (Math.abs(difference) > 50) {
-
-      if (difference > 0) {
+    // Vorheriges Bild
+    prevButton.addEventListener("click", () => {
         showImage(currentImageIndex - 1);
-      } else {
+    });
+
+    // Nächstes Bild
+    nextButton.addEventListener("click", () => {
         showImage(currentImageIndex + 1);
-      }
+    });
 
-    }
+    // Tastatursteuerung
+    lightbox.addEventListener("keydown", (event) => {
 
-    touchStartX = null;
+        if (event.key === "ArrowLeft") {
+            event.preventDefault();
+            showImage(currentImageIndex - 1);
+        }
 
-  }, { passive: true });
+        if (event.key === "ArrowRight") {
+            event.preventDefault();
+            showImage(currentImageIndex + 1);
+        }
+
+    });
+
+    // Klick außerhalb des Bildbereichs
+    lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+            closeLightbox();
+        }
+    });
+
+    // Touch-Gesten auf Smartphones
+    lightbox.addEventListener("touchstart", (event) => {
+        touchStartX = event.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener("touchend", (event) => {
+
+        if (touchStartX === null) return;
+
+        const touchEndX = event.changedTouches[0].screenX;
+        const difference = touchEndX - touchStartX;
+
+        if (Math.abs(difference) > 50) {
+
+            if (difference > 0) {
+                showImage(currentImageIndex - 1);
+            } else {
+                showImage(currentImageIndex + 1);
+            }
+
+        }
+
+        touchStartX = null;
+
+    }, { passive: true });
 
 }
