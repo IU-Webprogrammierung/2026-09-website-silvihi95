@@ -68,7 +68,7 @@ section { scroll-margin-top: 6rem; }
 
 .hero { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2rem; }
 .hero-text { min-width: 0; }
-.hero-image img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 1px solid var(--color-line); }
+.hero-image img { width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 1px solid var(--color-line);flex-shrink: 0; }
 .social-links { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; justify-content: center; margin: 1rem 0 0; padding: 0; }
 .social-links a { font-weight: 500; }
 
