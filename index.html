@@ -1,14 +1,19 @@
-
 <!DOCTYPE html>
+
 <html lang="de">
 
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta
+
     name="description"
+
     content="Silvi – Fotografie, Reisen, Bücher und eigene Web-Projekte."
+
   >
 
   <title>Silvia Hienz — Fotografie & mehr</title>
@@ -16,19 +21,27 @@
   <link rel="stylesheet" href="css/style.css">
 
   <link
+
     rel="icon"
+
     href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><text y=%2220%22 font-size=%2220%22>📷</text></svg>"
+
   >
+
 </head>
 
 <body>
 
   <!-- Skip-Link für Barrierefreiheit -->
+
   <a href="#main" class="skip-link">
+
     Zum Hauptinhalt springen
+
   </a>
 
-  <!-- HEADER -->
+  <!-- Header -->
+
   <header class="site-header">
 
     <div class="header-inner">
@@ -36,48 +49,81 @@
       <a href="#hero" class="logo">Silvi</a>
 
       <button
+
         class="nav-toggle"
+
         id="navToggle"
+
         type="button"
+
         aria-expanded="false"
+
         aria-controls="mainNav"
+
         aria-label="Menü öffnen"
+
       >
+
         <span class="hamburger"></span>
+
       </button>
 
       <nav
+
         id="mainNav"
+
         class="main-nav"
+
         aria-label="Hauptnavigation"
+
       >
+
         <ul>
+
           <li><a href="#hero">Über mich</a></li>
+
           <li><a href="#fotografie">Fotografie</a></li>
+
           <li><a href="#nebengewerbe">Nebengewerbe</a></li>
+
           <li><a href="#reisen">Reisen</a></li>
+
           <li><a href="#lesen">Lesen</a></li>
+
           <li><a href="#uniprojekt">Uni-Projekt</a></li>
+
           <li><a href="#privatprojekt">Privat-Projekt</a></li>
+
         </ul>
+
       </nav>
 
     </div>
+
   </header>
 
-  <!-- HAUPTINHALT -->
+  <!-- Hauptinhalt -->
+
   <main id="main">
 
-    <!-- ÜBER MICH -->
+    <!-- Über mich -->
+
     <section id="hero" class="section hero">
 
       <div class="hero-image">
+
         <img
+
           src="images/portrait.jpg"
+
           alt="Portraitfoto von mir"
+
           width="180"
+
           height="180"
+
         >
+
       </div>
 
       <div class="hero-text">
@@ -85,194 +131,242 @@
         <h1>Über mich</h1>
 
         <p>
+
           Hi, ich bin Silvi.
+
           Willkommen auf meiner Website!
+
           Im Mittelpunkt stehen hier Dinge, die Geschichten erzählen —
+
           ein flüchtiger Moment auf einem Foto, ein spannender Roman
+
           oder das Erschaffen eines eigenen Code-Projekts von Grund auf.
+
           Diese Seite zeigt eine kleine Auswahl meiner liebsten
+
           Beschäftigungen, Eindrücke von unterwegs und Einblicke
+
           in Arbeiten abseits des Studiums.
+
         </p>
 
       </div>
 
     </section>
 
-    <!-- FOTOGRAFIE -->
-    <section id="fotografie" class="section">
+    <!-- Fotografie: Landschaften -->
+  <section id="fotografie" class="section">
+    <h2>Fotografie</h2>
+    <p>
+      Wenn ich unterwegs bin, darf meine Kamera meistens nicht fehlen.
+      Neben Portraits, Familien und Hochzeiten fotografiere ich nämlich
+      auch gerne Landschaften. Ein paar meiner Lieblingsaufnahmen zeige ich euch hier.
+    </p>
+    <div class="gallery landscape-gallery" aria-label="Landschaftsfotografien">
+      <figure>
+        <button class="gallery-button" type="button" aria-label="Landschaftsbild 1 vergrößern">
+          <img src="images/landschaft-1.jpg" alt="Landschaftsaufnahme 1" loading="lazy">
+        </button>
+        <figcaption>Landschaft 1</figcaption>
+      </figure>
+      <figure>
+        <button class="gallery-button" type="button" aria-label="Landschaftsbild 2 vergrößern">
+          <img src="images/landschaft-2.jpg" alt="Landschaftsaufnahme 2" loading="lazy">
+        </button>
+        <figcaption>Landschaft 2</figcaption>
+      </figure>
+      <figure>
+        <button class="gallery-button" type="button" aria-label="Landschaftsbild 3 vergrößern">
+          <img src="images/landschaft-3.jpg" alt="Landschaftsaufnahme 3" loading="lazy">
+        </button>
+        <figcaption>Landschaft 3</figcaption>
+      </figure>
+      <figure>
+        <button class="gallery-button" type="button" aria-label="Landschaftsbild 4 vergrößern">
+          <img src="images/landschaft-4.jpg" alt="Landschaftsaufnahme 4" loading="lazy">
+        </button>
+        <figcaption>Landschaft 4</figcaption>
+      </figure>
+    </div>
+  </section>
 
-      <h2>Fotografie</h2>
+  <!-- Nebengewerbe: Shootings -->
+  <section id="nebengewerbe" class="section">
+    <h2>Nebengewerbe</h2>
+    <p>
+      Aus meinem Hobby ist mittlerweile auch ein kleines Nebengewerbe geworden.
+      Unter dem Namen Silvis Photography fotografiere ich hauptsächlich
+      Portraits, Familien und Hochzeiten.
+    </p>
+    <p>Hier zeige ich euch ein paar Bilder aus meinen Shootings.</p>
+    <div class="gallery business-gallery" aria-label="Fotografien aus Shootings">
+      <figure>
+        <button class="gallery-button" type="button" aria-label="Portraitfoto vergrößern">
+          <img src="images/foto-portrait.jpg" alt="Portraitaufnahme aus einem Fotoshooting" loading="lazy">
+        </button>
+        <figcaption>Portrait</figcaption>
+      </figure>
+      <figure>
+        <button class="gallery-button" type="button" aria-label="Familienfoto vergrößern">
+          <img src="images/foto-familie.jpg" alt="Aufnahme aus einem Familienshooting" loading="lazy">
+        </button>
+        <figcaption>Familie</figcaption>
+      </figure>
+      <figure>
+        <button class="gallery-button" type="button" aria-label="Hochzeitsfoto vergrößern">
+          <img src="images/foto-hochzeit.jpg" alt="Aufnahme aus einem Hochzeitsshooting" loading="lazy">
+        </button>
+        <figcaption>Hochzeit</figcaption>
+      </figure>
+    </div>
+  </section>
 
-      <p>
-        Eine kleine Auswahl festgehaltener Momente —
-        von Portrait und Familie bis Hochzeit und Landschaft.
-      </p>
+  <!-- Reisen -->
 
-      <div class="gallery">
-
-        <figure>
-          <img
-            src="images/foto-portrait.jpg"
-            alt="Portraitfotografie"
-            loading="lazy"
-          >
-          <figcaption>Portrait</figcaption>
-        </figure>
-
-        <figure>
-          <img
-            src="images/foto-familie.jpg"
-            alt="Familienfotografie"
-            loading="lazy"
-          >
-          <figcaption>Familie</figcaption>
-        </figure>
-
-        <figure>
-          <img
-            src="images/foto-hochzeit.jpg"
-            alt="Hochzeitsfotografie"
-            loading="lazy"
-          >
-          <figcaption>Hochzeit</figcaption>
-        </figure>
-
-        <figure>
-          <img
-            src="images/foto-landschaft.jpg"
-            alt="Landschaftsfotografie"
-            loading="lazy"
-          >
-          <figcaption>Landschaft</figcaption>
-        </figure>
-
-      </div>
-
-    </section>
-
-    <!-- NEBENGEWERBE -->
-    <section id="nebengewerbe" class="section">
-
-      <h2>Nebengewerbe</h2>
-
-      <p>
-        Aus Leidenschaft wird ein kleines Nebengewerbe —
-        und ein eigenes Web-Projekt dazu:
-
-        Unter
-        <a
-          href="https://www.silvis-photography.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >Silvis Photography</a>
-        biete ich Portraits, Familien- und Hochzeits-Shoots an.
-
-        Die Website habe ich komplett selbst programmiert
-        und gestaltet.
-
-        Mein Fokus beim Fotografieren?
-        Echte Augenblicke statt steife Posen.
-      </p>
-
-    </section>
-
-    <!-- REISEN -->
     <section id="reisen" class="section">
 
       <h2>Reisen</h2>
 
       <p>
+
         Mit der Kamera im Gepäck —
+
         Einblicke in einige meiner liebsten Reiseziele.
+
       </p>
 
       <div class="travel-list">
 
-        <!-- FINNLAND -->
+        <!-- Finnland -->
+
         <article class="travel-item">
 
           <img
+
             src="images/reise-finnland.jpg"
+
             alt="Reisefotografie aus Rovaniemi, Finnland"
+
             loading="lazy"
+
           >
 
           <div>
+
             <h3>Rovaniemi, Finnland — Oktober 2023</h3>
 
             <p>
+
               Eine eiskalte, aber einmalige Reise:
+
               Nach dem Flug nach Helsinki ging es
+
               mit dem legendären Santa-Claus-Nachtzug
+
               direkt hoch Richtung Polarkreis.
 
               Neben dem Besuch beim Weihnachtsmann
+
               standen eine Husky-Schlittentour und
+
               Wanderungen zu gefrorenen Wasserfällen
+
               auf dem Programm.
 
               Die Nordlichter zeigten sich zwar nur
+
               ein einziges Mal und auch nur für die
+
               Linse der Kamera — ein unvergessliches
+
               Erlebnis war es trotzdem.
+
             </p>
+
           </div>
 
         </article>
 
-        <!-- ISLAND -->
+        <!-- Island -->
+
         <article class="travel-item">
 
           <img
+
             src="images/reise-island.jpg"
+
             alt="Reisefotografie aus Island"
+
             loading="lazy"
+
           >
 
           <div>
+
             <h3>Island — Juni 2024</h3>
 
             <p>
+
               Ein lang gehegter Traum, den ich mir
+
               im Juni erfüllt habe:
 
               Von der Blauen Lagune über Reykjavík
+
               bis hin zu den Highlights des Golden
+
               Circle wie Geysir und Gullfoss.
 
               Ein faszinierendes Highlight war
+
               die Mitternachtssonne — die Nächte
+
               wurden nie wirklich dunkel,
+
               was fantastisches Licht für Fotos bot.
+
             </p>
+
           </div>
 
         </article>
 
-        <!-- SÜDTIROL -->
+        <!-- Südtirol -->
+
         <article class="travel-item">
 
           <img
+
             src="images/reise-suedtirol.jpg"
+
             alt="Reisefotografie aus Südtirol beim Snowboarden"
+
             loading="lazy"
+
           >
 
           <div>
+
             <h3>Südtirol — Dezember 2025</h3>
 
             <p>
+
               Die perfekte Kombination aus Sport
+
               und Fotografie:
 
               Am Kronplatz ging es vormittags auf
+
               das Snowboard und nachmittags mit
+
               der Kamera in die Natur —
 
               unter anderem für winterliche Motive
+
               am Antholzer See und am Pragser Wildsee.
+
             </p>
+
           </div>
 
         </article>
@@ -281,77 +375,110 @@
 
     </section>
 
-    <!-- LESEN -->
+    <!-- Lesen-->
+
     <section id="lesen" class="section">
 
       <h2>Lesen</h2>
 
       <p>
+
         Beim Lesen kann man wunderbar den Alltag
+
         hinter sich lassen und in völlig andere
+
         Welten eintauchen.
 
         Besonders die Geschichten von Ayla Dade
+
         haben es mir angetan — egal ob winterlich
+
         oder sommerlich.
 
         Zwei meiner Favoriten aus ihren Reihen:
+
       </p>
 
       <ul class="book-list">
 
         <li>
+
           <span class="book-title">
+
             Like Snow We Fall
+
           </span>
 
           <span class="book-author">
+
             — Ayla Dade (Winter-Dreams-Reihe)
+
           </span>
+
         </li>
 
         <li>
+
           <span class="book-title">
+
             Wanna Be My Lover
+
           </span>
 
           <span class="book-author">
+
             — Ayla Dade (Summer-Dreams-Reihe)
+
           </span>
+
         </li>
 
       </ul>
 
     </section>
 
-    <!-- UNI-PROJEKT -->
+    <!-- Uni-Projekt -->
+
     <section id="uniprojekt" class="section">
 
       <h2>Uni-Projekt</h2>
 
       <p>
+
         Im Rahmen eines Kurses in meinem Studium
+
         habe ich die offizielle Website für das
+
         Sichelhenket-Erntedankfest entwickelt.
 
         Auch nach Kursende pflege und betreue
+
         ich die Seite ehrenamtlich weiter.
 
         Infos rund um das Fest gibt's auf
 
         <a
+
           href="https://sichelhenket.de/"
+
           target="_blank"
+
           rel="noopener noreferrer"
+
         >sichelhenket.de</a>.
+
       </p>
 
       <article class="project-card">
 
         <img
+
           src="images/sichelhenket.jpg"
+
           alt="Screenshot der Sichelhenket-Website"
+
           loading="lazy"
+
         >
 
         <div>
@@ -359,9 +486,13 @@
           <h3>Sichelhenket Großbottwar</h3>
 
           <p>
+
             Die offizielle Website des traditionellen
+
             Erntedankfests — inklusive Veranstaltungsinfos,
+
             Programmübersicht und Helfer-Anmeldung.
+
           </p>
 
         </div>
@@ -370,26 +501,36 @@
 
     </section>
 
-    <!-- PRIVAT-PROJEKT -->
+    <!-- Privat-Projekt -->
+
     <section id="privatprojekt" class="section">
 
       <h2>Privat-Projekt</h2>
 
       <p>
+
         Neben dem Studium tüftle ich an eigenen
+
         Code-Projekten — vom ersten Konzept über
+
         das Design bis hin zur fertigen Interaktion.
 
         So entstehen in meiner Freizeit kleine
+
         Web-Apps und Spiele.
+
       </p>
 
       <article class="project-card">
 
         <img
+
           src="images/my-hits-screenshot.jpg"
+
           alt="Screenshot des Kartenspiels My-Hits"
+
           loading="lazy"
+
         >
 
         <div>
@@ -397,11 +538,17 @@
           <h3>My-Hits</h3>
 
           <p>
+
             Ein selbst entwickeltes, webbasiertes
+
             Partyspiel in Anlehnung an Hitster —
+
             entstanden als persönliches Projekt,
+
             um neue Ideen und Technologien
+
             auszuprobieren.
+
           </p>
 
         </div>
@@ -412,79 +559,122 @@
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
+
   <footer class="site-footer">
 
-    <p>&copy; 2026 Silvia Hienz</p>
+    <p>© 2026 Silvia Hienz</p>
 
     <p>
+
       <a href="datenschutz.html">Datenschutz</a>
+
       ·
+
       <a href="impressum.html">Impressum</a>
+
     </p>
 
   </footer>
 
-  <!-- BACK TO TOP -->
+  <!-- Back to top -->
+
   <button
+
     id="backToTop"
+
     class="back-to-top"
+
     type="button"
+
     aria-label="Nach oben scrollen"
+
   >
+
     ↑
+
   </button>
 
-  <!-- JAVASCRIPT -->
-  <script>
-    const navToggle = document.getElementById("navToggle");
-    const mainNav = document.getElementById("mainNav");
-    const backToTop = document.getElementById("backToTop");
+<!-- Lightbox -->
 
-    // Hamburger-Menü öffnen und schließen
-    navToggle.addEventListener("click", () => {
-      const isOpen = mainNav.classList.toggle("is-open");
+<dialog
 
-      navToggle.setAttribute("aria-expanded", String(isOpen));
-      navToggle.setAttribute(
-        "aria-label",
-        isOpen ? "Menü schließen" : "Menü öffnen"
-      );
-    });
+  id="lightbox"
 
-    // Menü nach Auswahl eines Links schließen
-    mainNav.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        mainNav.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
-        navToggle.setAttribute("aria-label", "Menü öffnen");
-      });
-    });
+  class="lightbox"
 
-    // Zurück-nach-oben-Button anzeigen
-    function updateBackToTop() {
-      backToTop.classList.toggle(
-        "is-visible",
-        window.scrollY > 300
-      );
-    }
+  aria-label="Fotogalerie – vergrößerte Ansicht"
 
-    window.addEventListener("scroll", updateBackToTop, {
-      passive: true
-    });
+>
 
-    updateBackToTop();
+  <div class="lightbox-content">
 
-    // Zurück nach oben scrollen
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({
-        top: 0,
-        behavior: window.matchMedia(
-          "(prefers-reduced-motion: reduce)"
-        ).matches ? "auto" : "smooth"
-      });
-    });
-  </script>
+    <button
+
+      class="lightbox-close"
+
+      type="button"
+
+      aria-label="Bildansicht schließen"
+
+    >
+
+      ×
+
+    </button>
+
+    <button
+
+      class="lightbox-prev"
+
+      type="button"
+
+      aria-label="Vorheriges Bild"
+
+    >
+
+      ‹
+
+    </button>
+
+    <figure>
+
+      <img
+
+        id="lightboxImage"
+
+        src=""
+
+        alt=""
+
+      >
+
+      <figcaption id="lightboxCaption"></figcaption>
+
+    </figure>
+
+    <button
+
+      class="lightbox-next"
+
+      type="button"
+
+      aria-label="Nächstes Bild"
+
+    >
+
+      ›
+
+    </button>
+
+    <p class="lightbox-counter" aria-live="polite"></p>
+
+  </div>
+
+</dialog>
+
+<!-- JavaScript -->
+<script src="js/script.js" defer></script>
 
 </body>
 </html>
