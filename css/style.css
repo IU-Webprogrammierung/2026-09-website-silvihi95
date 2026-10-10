@@ -111,10 +111,21 @@ section {
 }
 
 .logo {
-  font-size: 1.3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Caveat", cursive;
+  font-size: 2.2rem;
   font-weight: 700;
+  line-height: 1;
   color: var(--color-accent-dark);
   text-decoration: none;
+}
+
+.logo-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
 }
 
 .nav-toggle {
@@ -409,11 +420,6 @@ button:focus-visible {
 }
 
 
-
-
-.hero-text p {
-  margin-bottom: 0.75rem;
-}
 
 
 
