@@ -158,28 +158,25 @@ lightbox.addEventListener("close", () => {
 // Alle Galerien unabhängig voneinander einrichten
 document.querySelectorAll(".gallery").forEach((gallery) => {
 
-  // Alle Galerien unabhängig voneinander einrichten
-  document.querySelectorAll(".gallery").forEach((gallery) => {
+  const buttons = [
+    ...gallery.querySelectorAll(".gallery-button")
+  ];
 
-    const buttons = [
-      ...gallery.querySelectorAll(".gallery-button")
-    ];
-
-    buttons.forEach((button, index) => {
-      button.addEventListener("click", () => {
-        openLightbox(gallery, index);
-      });
+  buttons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      openLightbox(gallery, index);
     });
-
   });
 
-  // Schließen-Button
-  closeButton.addEventListener("click", closeLightbox);
+});
 
-  // Vorheriges Bild
-  prevButton.addEventListener("click", () => {
-    showImage(currentImageIndex - 1);
-  });
+ // Schließen-Button
+closeButton.addEventListener("click", closeLightbox);
+
+// Vorheriges Bild
+prevButton.addEventListener("click", () => {
+  showImage(currentImageIndex - 1);
+});
 
   // Nächstes Bild
   nextButton.addEventListener("click", () => {
