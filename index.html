@@ -1,713 +1,1358 @@
 <!DOCTYPE html>
 
+
+
 <html lang="de">
+
+
 
 <head>
 
+
+
   <meta charset="UTF-8">
+
+
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+
   <meta name="description" content="Silvi – Fotografie, Reisen, Bücher und eigene Web-Projekte.">
+
+
 
   <title>Silvia Hienz — Fotografie & mehr</title>
 
+
+
   <link rel="stylesheet" href="css/style.css">
 
+
+
   <link rel="icon"
+
     href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%3E%3Ctext%20y='20'%20font-size='20'%3E%F0%9F%93%B7%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
 </head>
+
+
 
 <body>
 
+
+
   <!-- Skip-Link für Barrierefreiheit -->
+
+
 
   <a href="#main" class="skip-link">
 
+
+
     Zum Hauptinhalt springen
+
+
 
   </a>
 
+
+
   <!-- Header -->
+
+
 
   <header class="site-header">
 
+
+
     <div class="header-inner">
 
+
+
       <a href="#hero" class="logo">
+
   <svg class="logo-icon" xmlns="http://www.w3.org/2000/svg"
+
        width="24" height="24" viewBox="0 0 24 24"
+
        fill="none" stroke="currentColor"
+
        stroke-width="1.8" stroke-linecap="round"
+
        stroke-linejoin="round" aria-hidden="true">
+
     <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/>
+
     <circle cx="12" cy="13" r="3"/>
+
   </svg>
+
   <span>Silvis Portfolio</span>
+
 </a>
 
+
+
       <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="mainNav"
+
         aria-label="Menü öffnen">
+
+
 
         <span class="hamburger"></span>
 
+
+
       </button>
+
+
 
       <nav id="mainNav" class="main-nav" aria-label="Hauptnavigation">
 
+
+
         <ul>
+
+
 
           <li><a href="#hero">Über mich</a></li>
 
+
+
           <li><a href="#fotografie">Fotografie</a></li>
+
+
 
           <li><a href="#nebengewerbe">Nebengewerbe</a></li>
 
+
+
           <li><a href="#reisen">Reisen</a></li>
+
+
 
           <li><a href="#lesen">Lesen</a></li>
 
+
+
           <li><a href="#uniprojekt">Uni-Projekt</a></li>
+
+
 
           <li><a href="#privatprojekt">Privat-Projekt</a></li>
 
+
+
         </ul>
+
+
 
       </nav>
 
+
+
     </div>
+
+
 
   </header>
 
+
+
   <!-- Hauptinhalt -->
+
+
 
   <main id="main">
 
-<!-- Über mich -->
-<section id="hero" class="section hero">
 
-  <div class="hero-image">
-    <img
-      src="images/portrait.jpg"
-      alt="Porträtfoto von mir"
-      width="1558"
-      height="2048"
-    >
-  </div>
 
+<!-- Editorial-Einstieg / Über mich -->
+<section id="hero" class="section hero hero-editorial" aria-labelledby="hero-title">
   <div class="hero-text">
-
-    <h2>Über mich</h2>
-
-    <p>
-      Hi, ich bin Silvi. Schön, dass du auf meiner Website
-      vorbeischaust!
-    </p>
-
-    <p>
-      In meiner Freizeit beschäftige ich mich gerne mit Fotografie,
-      Reisen, Büchern und eigenen Projekten. Besonders gerne halte
-      ich mit meiner Kamera schöne Landschaften und besondere Momente
-      fest. Auf Reisen entdecke ich neue Orte, und wenn es etwas
-      ruhiger sein darf, greife ich gerne zu einem guten Buch.
-    </p>
-
-    <p>
-      Neben meinen Hobbys studiere ich Medieninformatik im Fernstudium.
-      Dabei beschäftige ich mich mit Webentwicklung, Programmierung
-      und der Gestaltung digitaler Anwendungen. Was ich im Studium
-      lerne, probiere ich auch gerne in eigenen Projekten aus.
-    </p>
-
-    <p>
-      Auf dieser Website findest du eine Auswahl meiner Fotografien,
-      Reiseerlebnisse und Projekte.
-    </p>
-
+    <span class="hero-eyebrow">FOTOGRAFIE · REISEN · MEDIENINFORMATIK</span>
+    <h1 id="hero-title">Hi, ich bin <em>Silvi.</em></h1>
+    <p class="hero-lead">Zwischen Kreativität<br>und Code.</p>
+    <p class="hero-intro">Schön, dass du hier bist! Ich liebe es, mit meiner Kamera besondere Momente festzuhalten, neue Orte zu entdecken und eigene digitale Ideen zum Leben zu erwecken.</p>
+    <div class="hero-actions">
+      <a class="hero-cta" href="#fotografie">Meine Fotografien <span aria-hidden="true">↗</span></a>
+      <a class="hero-link" href="#uniprojekt">Meine Projekte <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="hero-about">
+      <span class="hero-about-label">EIN BISSCHEN ÜBER MICH</span>
+      <p>In meiner Freizeit begeistern mich Fotografie, Reisen und Bücher. Nebenbei studiere ich Medieninformatik im Fernstudium und beschäftige mich mit Webentwicklung, Programmierung und der Gestaltung digitaler Anwendungen. Hier teile ich meine Bilder, Erlebnisse und Projekte.</p>
+    </div>
   </div>
-
+  <div class="hero-visual">
+    <div class="hero-image">
+      <img src="images/portrait.jpg" alt="Porträtfoto von Silvi" width="1558" height="2048" fetchpriority="high">
+    </div>
+    <span class="hero-image-caption">KREATIV DENKEN. NEUES ENTDECKEN.</span>
+    <span class="hero-image-index" aria-hidden="true">01 / PORTFOLIO</span>
+  </div>
 </section>
 
-    <!-- Fotografie: Landschaften -->
+  <!-- Fotografie: Landschaften -->
+
     <section id="fotografie" class="section">
+
       <h2>Fotografie</h2>
 
+
+
       <p>
+
         Wenn ich unterwegs bin, darf meine Kamera meistens nicht fehlen.
+
         Die Fotografie gehört schon seit einiger Zeit zu meinen liebsten
+
         Hobbys und bietet mir die Möglichkeit, besondere Momente und
+
         Erinnerungen festzuhalten.
+
       </p>
 
+
+
       <p>
+
         Dabei fotografiere ich ganz unterschiedliche Motive. Neben
+
         Porträts, Familien und Hochzeiten gehören auch Landschaften
+
         zu meinen Lieblingsmotiven. Gerade auf Reisen nehme ich meine
+
         Kamera gerne mit, um neue Orte, beeindruckende Landschaften
+
         und kleine Details festzuhalten, die einem im Alltag vielleicht
+
         gar nicht auffallen würden.
+
       </p>
 
+
+
       <p>
+
         Hier gibt es eine kleine Auswahl meiner Aufnahmen aus
+
         verschiedenen Bereichen der Fotografie zu sehen.
+
       </p>
+
       <div class="gallery landscape-gallery" role="group" aria-label="Landschaftsfotografien">
+
         <figure>
+
           <button class="gallery-button" type="button" aria-label="Foto vom Sonnenaufgang am Achensee vergrößern ">
+
             <img src="images/landschaft-1.jpg"
+
               alt="Ausflugsschiff auf dem Achensee in Tirol bei Sonnenaufgang, mit Bergen und Wolken im Hintergrund"
+
               loading="lazy" width="2048" height="1365">
+
           </button>
+
           <figcaption>Sonnenaufgang am Achensee</figcaption>
+
         </figure>
+
         <figure>
+
           <button class="gallery-button" type="button" aria-label="Foto vom Sonnenaufgang auf Mallorca vergrößern">
+
             <img src="images/landschaft-2.jpg"
+
               alt="Sonnenuntergang über dem Meer auf Mallorca mit einem fliegenden Vogel" loading="lazy" width="1370"
+
               height="2048">
+
           </button>
+
           <figcaption>Sonnenuntergang auf Mallorca</figcaption>
+
         </figure>
+
         <figure>
+
           <button class="gallery-button" type="button" aria-label="Foto vom Abendlicht in Südtirol vergrößern">
+
             <img src="images/landschaft-3.jpg"
+
               alt="Berggipfel in Südtirol, die von der tief stehenden Abendsonne orange beleuchtet werden"
+
               loading="lazy" width="1366" height="2048">
+
           </button>
+
           <figcaption>Abendlicht in Südtirol</figcaption>
+
         </figure>
+
         <figure>
+
           <button class="gallery-button" type="button" aria-label="Foto vom Eibsee im Winter vergrößern">
+
             <img src="images/landschaft-4.jpg"
+
               alt="Winterliche Berglandschaft am Eibsee mit kleinen bewaldeten Inseln und Spiegelungen im ruhigen Wasser"
+
               loading="lazy" width="1365" height="2048">
+
           </button>
+
           <figcaption>Eibsee im Winter</figcaption>
+
         </figure>
+
       </div>
+
     </section>
+
+
 
     <!-- Nebengewerbe: Shootings -->
+
     <section id="nebengewerbe" class="section">
+
       <h2>Nebengewerbe</h2>
 
+
+
       <p>
+
         Aus meinem Hobby ist mittlerweile auch ein kleines Nebengewerbe
+
         geworden. Unter dem Namen <strong>Silvis Photography</strong>
+
         fotografiere ich hauptsächlich Porträts, Familien und Hochzeiten.
+
       </p>
 
+
+
       <p>
+
         Dabei geht es mir vor allem darum, natürliche Momente festzuhalten.
+
         Ob ein gemeinsames Familienfoto, ein individuelles Porträt oder
+
         die besonderen Augenblicke einer Hochzeit – jedes Shooting ist
+
         anders und bringt seine eigenen Erinnerungen mit sich.
+
       </p>
 
+
+
       <p>
+
         Die Fotografie ist für mich deshalb nicht nur ein kreativer
+
         Ausgleich, sondern auch eine Möglichkeit, anderen Menschen
+
         mit meinen Bildern eine Freude zu machen.
+
       </p>
+
       <p>Hier zeige ich euch ein paar Bilder aus meinen Shootings.</p>
+
       <div class="gallery business-gallery" role="group" aria-label="Fotografien aus Shootings">
+
         <figure>
+
           <button class="gallery-button" type="button" aria-label="Portraitfoto vergrößern">
+
             <img src="images/foto-portrait.jpg"
+
               alt="Frau mit weißem Motorradhelm und schwarzem T-Shirt steht neben einem gelb-schwarzen Motorrad"
+
               loading="lazy" width="1365" height="2048">
+
           </button>
+
           <figcaption>Portraitshooting mit Motorrad</figcaption>
+
         </figure>
+
         <figure>
+
           <button class="gallery-button" type="button" aria-label="Familienfoto vergrößern">
+
             <img src="images/foto-familie.jpg"
+
               alt="Vierköpfige Familie spaziert gemeinsam auf einem Weg zwischen Bäumen im warmen Sonnenlicht"
+
               loading="lazy" width="2048" height="1152">
+
           </button>
+
           <figcaption>Familienshooting Outdoor</figcaption>
+
         </figure>
+
         <figure>
+
           <button class="gallery-button" type="button" aria-label="Hochzeitsfoto vergrößern">
+
             <img src="images/foto-hochzeit.jpg"
+
               alt="Braut in einem weißen Hochzeitskleid mit langem Schleier steht zwischen alten Steinmauern im Abendlicht"
+
               loading="lazy" width="2048" height="1127">
+
           </button>
+
           <figcaption>Braut im Abendlicht</figcaption>
+
         </figure>
+
       </div>
+
     </section>
+
+
 
     <!-- REISEN -->
 
+
+
     <section id="reisen" class="section">
+
+
 
       <h2>Reisen</h2>
 
+
+
       <p>
+
+
 
         Mit der Kamera im Gepäck —
 
+
+
         Einblicke in einige meiner liebsten Reiseziele.
+
+
 
       </p>
 
+
+
       <div class="travel-list">
+
+
 
         <!-- FINNLAND -->
 
+
+
         <article class="travel-item">
 
+
+
           <div>
+
+
 
             <h3>Rovaniemi, Finnland – Oktober 2023</h3>
 
+
+
             <p>
+
               Im Oktober 2023 ging es nach Rovaniemi in Finnland,
+
               direkt an den Polarkreis. Nach dem Flug nach Helsinki
+
               führte die Reise mit dem Santa-Claus-Nachtzug weiter
+
               Richtung Norden. Schon die Zugfahrt war ein besonderes
+
               Erlebnis und der perfekte Einstieg in die Reise.
+
             </p>
 
+
+
             <p>
+
               Vor Ort standen einige Ausflüge auf dem Programm:
+
               ein Besuch beim Weihnachtsmann im Santa Claus Village,
+
               eine Husky-Schlittentour und Wanderungen zu gefrorenen
+
               Wasserfällen. Bei den eisigen Temperaturen zeigte sich
+
               Finnland von seiner winterlichen Seite.
+
             </p>
 
+
+
             <p>
+
               Ein besonderes Highlight waren die Nordlichter.
+
               Sie zeigten sich während der Reise zwar nur ein
+
               einziges Mal und waren mit bloßem Auge kaum zu erkennen,
+
               dafür konnte die Kamera sie festhalten. Auch ohne
+
               eine große Nordlichtshow blieb die Reise ein
+
               unvergessliches Erlebnis.
+
             </p>
+
+
 
           </div>
+
+
+
 
 
           <div class="gallery travel-gallery" role="group" aria-label="Bilder aus Rovaniemi">
+
             <figure>
+
               <button class="gallery-button" type="button" aria-label="Foto von der gemütlichen Feuerstelle vergrößern">
+
                 <img src="images/reise-rovaniemi-1.jpg"
+
                   alt="Ein Lagerfeuer brennt in einer runden Feuerstelle, umgeben von verschneiten Nadelbäumen und Holzhütten."
+
                   loading="lazy" width="1369" height="2048">
+
               </button>
+
               <figcaption>Gemütliche Feuerstelle im verschneiten Winterwald</figcaption>
+
             </figure>
+
             <figure>
+
               <button class="gallery-button" type="button" aria-label="Foto vom Weihnachtsdorf vergrößern">
+
                 <img src="images/reise-rovaniemi-2.jpg"
+
                   alt="Verschneite Gebäude, rote Arctic-Circle-Säulen und ein geschmückter Weihnachtsbaum im Weihnachtsmanndorf."
+
                   loading="lazy" width="1369" height="2048">
+
               </button>
+
               <figcaption>Am Polarkreis im Weihnachtsmanndorf von Rovaniemi</figcaption>
+
             </figure>
+
             <figure>
+
               <button class="gallery-button" type="button" aria-label="Foto von den gefrorenen Wasserfällen vergrößern">
+
                 <img src="images/reise-rovaniemi-3.jpg"
+
                   alt="Lange Eiszapfen hängen an einer felsigen Wand in einem verschneiten Nadelwald." loading="lazy"
+
                   width="1365" height="2048">
+
               </button>
+
               <figcaption>Gefrorene Wasserfälle in Lapplands Winterlandschaft</figcaption>
+
             </figure>
+
           </div>
+
         </article>
+
+
 
         <!-- ISLAND -->
 
+
+
         <article class="travel-item">
 
+
+
           <div>
+
+
 
             <h3>Island — Juni 2024</h3>
 
-          
+
+
+
 
             <p>
+
               Island war schon lange ein Reiseziel, das unbedingt
+
               auf der Wunschliste stand. Im Juni ging dieser Traum
+
               endlich in Erfüllung. Auf dem Programm standen unter
+
               anderem die berühmte Blaue Lagune, die Hauptstadt
+
               Reykjavík und der Golden Circle mit seinen
+
               beeindruckenden Natursehenswürdigkeiten.
+
             </p>
 
+
+
             <p>
+
               Besonders faszinierend waren die Landschaften,
+
               die unterschiedlicher kaum sein könnten.
+
               Von heißen Quellen und dampfenden Geysiren bis hin
+
               zum mächtigen Wasserfall Gullfoss gab es unterwegs
+
               immer wieder etwas Neues zu entdecken.
+
             </p>
 
+
+
             <p>
+
               Ein besonderes Erlebnis war die Mitternachtssonne.
+
               Im Juni werden die Nächte in Island kaum dunkel,
+
               sodass selbst spät am Abend noch Tageslicht vorhanden
+
               ist. Gerade zum Fotografieren bot das eine
+
               außergewöhnliche Gelegenheit, die Landschaften
+
               in einem ganz besonderen Licht festzuhalten.
+
             </p>
+
+
 
           </div>
+
+
+
 
 
           <div class="gallery travel-gallery" role="group" aria-label="Bilder aus Island">
+
             <figure>
+
               <button class="gallery-button" type="button" aria-label="Foto von Gullfoss vergrößern">
+
                 <img src="images/reise-island-1.jpg"
+
                   alt="Der Gullfoss-Wasserfall stürzt über mehrere Felsstufen in eine tiefe Schlucht." loading="lazy"
+
                   width="2048" height="1369">
+
               </button>
+
               <figcaption>Gullfoss – einer der bekanntesten Wasserfälle Islands</figcaption>
+
             </figure>
+
             <figure>
+
               <button class="gallery-button" type="button" aria-label="Foto von der Flusslandschaft vergrößern">
+
                 <img src="images/reise-island-2.jpg"
+
                   alt="Ein Fluss fließt zwischen dunklen Felsen und moosbewachsenen Ufern unter einem wolkenverhangenen Himmel."
+
                   loading="lazy" width="1638" height="2048">
+
               </button>
+
               <figcaption>Flusslandschaft zwischen Islands Felsformationen</figcaption>
+
             </figure>
+
             <figure>
+
               <button class="gallery-button" type="button"
+
                 aria-label="Foto von einem beeindruckenden Geysirausbruch vergrößern">
+
                 <img src="images/reise-island-3.jpg" alt="Ein beeindruckender Geysirausbruch im Golden Circle"
+
                   loading="lazy" width="1068" height="2048">
+
               </button>
+
               <figcaption>Ein beeindruckender Geysirausbruch im Golden Circle</figcaption>
+
             </figure>
+
           </div>
+
         </article>
+
+
 
         <!-- SÜDTIROL -->
 
+
+
         <article class="travel-item">
+
+
 
           <div>
 
+
+
             <h3>Südtirol – Dezember 2025</h3>
 
+
+
             <p>
+
               Im Dezember 2025 ging es nach Südtirol, wo sich Wintersport
+
               und Fotografie wunderbar miteinander verbinden ließen.
+
               Am Kronplatz standen vormittags einige Stunden auf dem
+
               Snowboard auf dem Programm, bevor es nachmittags mit
+
               der Kamera auf Entdeckungstour ging.
+
             </p>
 
+
+
             <p>
+
               Neben den Skipisten gab es auch abseits der Berge einiges
+
               zu sehen. Besonders der Antholzer See und der Pragser
+
               Wildsee boten mit ihrer winterlichen Umgebung schöne
+
               Fotomotive. Die verschneiten Landschaften und die
+
               beeindruckende Bergkulisse machten jeden Ausflug
+
               zu einem besonderen Erlebnis.
+
             </p>
 
+
+
             <p>
+
               Die Reise war eine schöne Mischung aus sportlichen
+
               Tagen auf der Piste und ruhigeren Momenten in der Natur.
+
               Gleichzeitig bot sie viele Gelegenheiten, die winterliche
+
               Landschaft Südtirols mit der Kamera festzuhalten.
+
             </p>
+
+
 
           </div>
+
+
+
 
 
           <div class="gallery travel-gallery" role="group" aria-label="Bilder aus Südtirol">
+
             <figure>
+
               <button class="gallery-button" type="button" aria-label="Foto vom Kronplatz vergrößern">
+
                 <img src="images/reise-suedtirol-1.jpg"
+
                   alt="Eine Snowboarderin mit weißem Helm steht auf einer sonnigen Skipiste vor schneebedeckten Bergen und einer Gondelbahn."
+
                   loading="lazy" width="1763" height="2048">
+
               </button>
+
               <figcaption>Snowboarden mit Blick auf die winterliche Bergwelt am Kronplatz</figcaption>
+
             </figure>
+
             <figure>
+
               <button class="gallery-button" type="button" aria-label="Foto vom Antholzer See vergrößern">
+
                 <img src="images/reise-suedtirol-2.jpg"
+
                   alt="Schneebedeckte Berggipfel und bewaldete Hänge spiegeln sich im klaren, türkisgrünen Wasser des Antholzer Sees."
+
                   loading="lazy" width="1366" height="2048">
+
               </button>
+
               <figcaption>Kristallklares Wasser und beeindruckende Bergkulisse am Antholzer See</figcaption>
+
             </figure>
+
             <figure>
+
               <button class="gallery-button" type="button" aria-label="Foto vom Pragser Wildsee vergrößern">
+
                 <img src="images/reise-suedtirol-3.jpg"
+
                   alt="Ein hölzernes Bootshaus auf Stelzen steht am schneebedeckten Ufer des zugefrorenen Pragser Wildsees vor hohen Berggipfeln."
+
                   loading="lazy" width="1366" height="2048">
+
               </button>
+
               <figcaption>Winterliche Stille am Pragser Wildsee</figcaption>
+
             </figure>
+
           </div>
+
         </article>
+
+
 
       </div>
 
+
+
     </section>
+
+
 
     <!-- Lesen-->
 
 
+
+
+
     <section id="lesen" class="section">
+
       <h2>Lesen</h2>
 
-      <p>
-        Bücher bieten die Möglichkeit, in andere Welten einzutauchen,
-        den Alltag für einen Moment hinter sich zu lassen und
-        spannende Geschichten zu entdecken.
-      </p>
+
 
       <p>
-        Die Autorin Ayla Dade begeistert mit emotionalen Geschichten,
-        vielschichtigen Charakteren und außergewöhnlichen Schauplätzen.
-        Ihre Winter-Dreams- und Summer-Dreams-Reihen entführen
-        in zwei ganz unterschiedliche Welten.
+
+        Bücher bieten die Möglichkeit, in andere Welten einzutauchen,
+
+        den Alltag für einen Moment hinter sich zu lassen und
+
+        spannende Geschichten zu entdecken.
+
       </p>
+
+
+
+      <p>
+
+        Die Autorin Ayla Dade begeistert mit emotionalen Geschichten,
+
+        vielschichtigen Charakteren und außergewöhnlichen Schauplätzen.
+
+        Ihre Winter-Dreams- und Summer-Dreams-Reihen entführen
+
+        in zwei ganz unterschiedliche Welten.
+
+      </p>
+
+
 
       <div class="gallery book-gallery" role="group" aria-label="Meine Lieblingsbücher">
 
+
+
         <figure>
+
           <button type="button" class="gallery-button" aria-label="Like Snow We Fall vergrößern">
+
             <img src="images/buch-like-snow-we-fall.png"
+
               alt="Like Snow We Fall von Ayla Dade mit warmer Lichterkette auf weißem Hintergrund" loading="lazy">
+
           </button>
 
+
+
           <figcaption>
+
             <strong>Like Snow We Fall – Winter-Dreams-Reihe</strong>
+
             <p>
+
               Der erste Band der insgesamt sechsteiligen Winter-Dreams-Reihe
+
               von Ayla Dade spielt im verschneiten Aspen. Die Eiskunstläuferin
+
               Paisley wagt einen Neuanfang und begegnet dort dem erfolgreichen
+
               Snowboarder Knox, der ihr Leben gehörig durcheinanderbringt.
+
               Eine romantische Geschichte voller Gefühle, Geheimnisse
+
               und winterlicher Atmosphäre.
+
             </p>
+
           </figcaption>
+
         </figure>
+
+
 
         <figure>
+
           <button type="button" class="gallery-button" aria-label="Wanna Be My Lover vergrößern">
+
             <img src="images/buch-wanna-be-my-lover.png"
+
               alt="Wanna Be My Lover von Ayla Dade mit warmer Lichterkette auf weißem Hintergrund" loading="lazy">
+
           </button>
 
+
+
           <figcaption>
+
             <strong>Wanna Be My Lover – Summer-Dreams-Reihe</strong>
+
             <p>
+
               Der erste Band der Summer-Dreams-Reihe von Ayla Dade entführt
+
               in das sommerliche Cape May der 1990er-Jahre. Im Mittelpunkt
+
               steht die talentierte Tänzerin Ophelia, die zwischen großen
+
               Träumen, neuen Begegnungen und aufkommenden Gefühlen ihren
+
               eigenen Weg finden muss. Eine romantische Geschichte voller
+
               Emotionen, Sommerfeeling und nostalgischer 90er-Jahre-Stimmung.
+
             </p>
+
           </figcaption>
+
         </figure>
+
+
 
       </div>
+
     </section>
+
+
+
 
 
     <!-- Uni-Projekt -->
 
+
+
     <section id="uniprojekt" class="section">
+
+
 
       <h2>Uni-Projekt</h2>
 
+
+
       <p>
+
         Im Rahmen meines Medieninformatikstudiums habe ich für
+
         einen Kurs die offizielle Website des Sichelhenket-Erntedankfests
+
         entwickelt. Ziel war es, einen übersichtlichen Webauftritt
+
         zu erstellen, auf dem sich Besucher über das Fest
+
         informieren können.
+
       </p>
 
+
+
       <p>
+
         Von der Gestaltung bis zur technischen Umsetzung konnte
+
         ich dabei das Wissen aus dem Studium praktisch anwenden.
+
         Das Projekt bot die Möglichkeit, eine Website nicht nur
+
         für eine Studienaufgabe, sondern für eine tatsächliche
+
         Veranstaltung zu entwickeln.
+
       </p>
 
+
+
       <p>
+
         Auch nach Abschluss des Kurses betreue und pflege ich
+
         die Website ehrenamtlich weiter. Dadurch bleibt das
+
         Projekt bestehen und kann bei Bedarf aktualisiert
+
         und erweitert werden.
+
       </p>
 
+
+
       <p>
+
         Weitere Informationen zum Fest gibt es auf
+
         <a href="https://sichelhenket.de/" target="_blank" rel="noopener noreferrer">sichelhenket.de</a>.
+
       </p>
+
+
 
       <article class="project-card">
 
+
+
         <div class="gallery project-gallery">
+
           <figure>
+
             <button class="gallery-button" type="button" aria-label="Screenshot der Sichelhenket-Website vergrößern">
+
               <img src="images/sichelhenket.jpg" alt="Screenshot der Sichelhenket-Website" loading="lazy" width="2048"
+
                 height="1151">
+
             </button>
+
             <figcaption>Website-Projekt Sichelhenket</figcaption>
+
           </figure>
+
         </div>
 
+
+
         <div>
+
+
 
           <h3>Sichelhenket Großbottwar</h3>
 
+
+
           <p>
+
+
 
             Die offizielle Website des traditionellen
 
+
+
             Erntedankfests — inklusive Veranstaltungsinfos,
+
+
 
             Programmübersicht und Helfer-Anmeldung.
 
+
+
           </p>
+
+
 
         </div>
 
+
+
       </article>
 
+
+
     </section>
+
+
 
     <!-- Privat-Projekt -->
 
+
+
     <section id="privatprojekt" class="section">
+
+
 
       <h2>Privat-Projekt</h2>
 
-      <p>
-        Neben dem Studium beschäftige ich mich auch in meiner Freizeit
-        mit eigenen Programmierprojekten. Dabei entstehen kleine
-        Webanwendungen und Spiele, bei denen ich neue Ideen ausprobieren
-        und meine Kenntnisse in der Webentwicklung erweitern kann.
-      </p>
+
 
       <p>
-        Von der ersten Idee über die Gestaltung bis zur Programmierung
-        setze ich die Projekte Schritt für Schritt selbst um.
-        Dabei geht es nicht nur darum, dass am Ende alles funktioniert,
-        sondern auch darum, neue Lösungswege kennenzulernen.
+
+        Neben dem Studium beschäftige ich mich auch in meiner Freizeit
+
+        mit eigenen Programmierprojekten. Dabei entstehen kleine
+
+        Webanwendungen und Spiele, bei denen ich neue Ideen ausprobieren
+
+        und meine Kenntnisse in der Webentwicklung erweitern kann.
+
       </p>
+
+
+
+      <p>
+
+        Von der ersten Idee über die Gestaltung bis zur Programmierung
+
+        setze ich die Projekte Schritt für Schritt selbst um.
+
+        Dabei geht es nicht nur darum, dass am Ende alles funktioniert,
+
+        sondern auch darum, neue Lösungswege kennenzulernen.
+
+      </p>
+
+
 
       <article class="project-card">
 
+
+
         <div class="gallery project-gallery">
+
           <figure>
+
             <button class="gallery-button" type="button" aria-label="Screenshot des Kartenspiels My-Hits vergrößern">
+
               <img src="images/my-hits.jpg" alt="Screenshot des Kartenspiels My-Hits" loading="lazy" width="2048"
+
                 height="1152">
+
             </button>
+
             <figcaption>Kartenspiel My-Hits</figcaption>
+
           </figure>
+
         </div>
+
+
 
         <div>
+
           <h3>My-Hits</h3>
 
-          <p>
-            My-Hits ist ein selbst entwickeltes, webbasiertes Partyspiel,
-            das vom bekannten Musikspiel Hitster inspiriert wurde.
-            Das Projekt verbindet meine Begeisterung für Musik
-            mit der Möglichkeit, ein eigenes interaktives Spiel
-            zu programmieren.
-          </p>
+
 
           <p>
-            Die Entwicklung von My-Hits bietet mir die Gelegenheit,
-            verschiedene Funktionen auszuprobieren, die Benutzeroberfläche
-            zu gestalten und das Spiel nach und nach weiterzuentwickeln.
+
+            My-Hits ist ein selbst entwickeltes, webbasiertes Partyspiel,
+
+            das vom bekannten Musikspiel Hitster inspiriert wurde.
+
+            Das Projekt verbindet meine Begeisterung für Musik
+
+            mit der Möglichkeit, ein eigenes interaktives Spiel
+
+            zu programmieren.
+
           </p>
+
+
+
+          <p>
+
+            Die Entwicklung von My-Hits bietet mir die Gelegenheit,
+
+            verschiedene Funktionen auszuprobieren, die Benutzeroberfläche
+
+            zu gestalten und das Spiel nach und nach weiterzuentwickeln.
+
+          </p>
+
         </div>
+
+
 
       </article>
 
+
+
     </section>
+
+
 
   </main>
 
+
+
   <!-- Footer -->
+
+
 
   <footer class="site-footer">
 
+
+
     <p>© 2026 Silvia Hienz</p>
+
+
 
     <p>
 
+
+
       <a href="datenschutz.html">Datenschutz</a>
+
+
 
       ·
 
+
+
       <a href="impressum.html">Impressum</a>
+
+
 
     </p>
 
+
+
   </footer>
+
+
 
   <!-- Back to top -->
 
+
+
   <button id="backToTop" class="back-to-top" type="button" aria-label="Nach oben scrollen">
+
+
 
     ↑
 
+
+
   </button>
+
+
 
   <!-- Lightbox -->
 
+
+
   <dialog id="lightbox" class="lightbox" aria-label="Fotogalerie – vergrößerte Ansicht">
+
+
 
     <div class="lightbox-content">
 
+
+
       <button class="lightbox-close" type="button" aria-label="Bildansicht schließen">
+
+
 
         ×
 
+
+
       </button>
+
+
 
       <button class="lightbox-prev" type="button" aria-label="Vorheriges Bild">
 
+
+
         ‹
 
+
+
       </button>
+
+
 
       <figure>
 
+
+
         <img id="lightboxImage" src="images/portrait.jpg" alt="">
+
+
 
         <figcaption id="lightboxCaption"></figcaption>
 
+
+
       </figure>
+
+
 
       <button class="lightbox-next" type="button" aria-label="Nächstes Bild">
 
+
+
         ›
+
+
 
       </button>
 
+
+
       <p class="lightbox-counter" aria-live="polite"></p>
+
+
 
     </div>
 
+
+
   </dialog>
 
+
+
   <!-- JavaScript -->
+
   <script src="js/script.js" defer></script>
 
+
+
 </body>
+
+
 
 </html>

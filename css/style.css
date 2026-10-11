@@ -1915,3 +1915,181 @@ body {
   }
 
 }
+
+
+/* =======================================================
+   Editorial Hero – neuer Portfolio-Einstieg
+   Alle bestehenden Galerien, Lightbox und Hintergrund bleiben.
+   ======================================================= */
+.hero-editorial {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6.5rem);
+  min-height: min(810px, calc(100svh - 76px));
+  padding-block: clamp(4.5rem, 8vw, 8rem);
+  text-align: left;
+}
+.hero-editorial .hero-text {
+  max-width: 670px;
+  min-width: 0;
+}
+.hero-editorial .hero-eyebrow {
+  font-family: 'DM Sans', var(--font-body);
+  font-size: .71rem;
+  font-weight: 700;
+  letter-spacing: .19em;
+  margin-bottom: clamp(1.5rem, 4vw, 2.7rem);
+  color: #566e5d;
+}
+.hero-editorial h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(3.8rem, 6.6vw, 7rem);
+  line-height: 1.06;
+  letter-spacing: -.055em;
+  margin: 0 0 1.3rem;
+  color: #302d29;
+}
+.hero-editorial h1 em {
+  font-weight: 400;
+  color: #7a8d77;
+}
+.hero-editorial .hero-lead {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.65rem, 2.6vw, 2.7rem);
+  line-height: 1.25;
+  color: #665a50;
+  margin: 0 0 1.7rem;
+}
+.hero-editorial .hero-intro {
+  max-width: 510px;
+  font-family: 'DM Sans', var(--font-body);
+  font-size: clamp(.98rem, 1.2vw, 1.1rem);
+  line-height: 1.85;
+  color: #554e49;
+  margin: 0;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem 1.8rem;
+  margin-top: 2rem;
+}
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.7rem;
+  background: #4b6355;
+  border: 1px solid #4b6355;
+  color: #fff;
+  padding: .85rem 1.25rem;
+  font-family: 'DM Sans', var(--font-body);
+  font-size: .88rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s ease, transform .2s ease;
+}
+.hero-cta:hover { background: #364a3f; color: #fff; transform: translateY(-2px); }
+.hero-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  font-family: 'DM Sans', var(--font-body);
+  font-size: .9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #4b6355;
+  padding-bottom: .2rem;
+}
+.hero-about {
+  border-top: 1px solid rgba(64, 66, 53, .25);
+  margin-top: clamp(2.6rem, 5vw, 4rem);
+  padding-top: 1.4rem;
+  max-width: 520px;
+}
+.hero-about-label {
+  display: block;
+  margin-bottom: .65rem;
+  color: #5b6b5e;
+  font-family: 'DM Sans', var(--font-body);
+  font-size: .69rem;
+  font-weight: 700;
+  letter-spacing: .15em;
+}
+.hero-about p { margin: 0; font-size: .94rem; line-height: 1.75; color: #5d554f; }
+.hero-visual { position: relative; min-width: 0; padding: 1.3rem 1.6rem 2.4rem 0; }
+.hero-editorial .hero-image {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  z-index: 0;
+}
+.hero-editorial .hero-image::before {
+  content: '';
+  position: absolute;
+  inset: -18px -19px 18px 19px;
+  z-index: -1;
+  border-radius: 0;
+  background: rgba(220, 203, 185, .55);
+  transform: none;
+}
+.hero-editorial .hero-image img {
+  display: block;
+  width: 100%;
+  height: clamp(430px, 48vw, 650px);
+  max-height: 72svh;
+  border: none;
+  border-radius: 0;
+  object-fit: cover;
+  object-position: center 35%;
+  box-shadow: 0 20px 60px rgba(50, 38, 33, .13);
+}
+.hero-image-caption {
+  display: block;
+  font-family: 'DM Sans', var(--font-body);
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  color: #625b54;
+  margin-top: 1.2rem;
+}
+.hero-image-index {
+  position: absolute;
+  right: 0;
+  bottom: 3.1rem;
+  writing-mode: vertical-rl;
+  font-family: 'DM Sans', var(--font-body);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  color: #625b54;
+}
+@media (max-width: 850px) {
+  .hero-editorial {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .8fr);
+    gap: 2rem;
+    min-height: 0;
+  }
+  .hero-editorial h1 { font-size: clamp(3rem, 6vw, 4.5rem); }
+  .hero-editorial .hero-image img { height: 470px; max-height: none; }
+}
+@media (max-width: 680px) {
+  .hero-editorial {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding-block: 3.5rem 4rem;
+  }
+  .hero-editorial .hero-text { max-width: 100%; }
+  .hero-editorial h1 { font-size: clamp(3.35rem, 12vw, 5rem); }
+  .hero-editorial .hero-lead { font-size: clamp(1.6rem, 6vw, 2.25rem); }
+  .hero-visual { max-width: 460px; width: 100%; margin-inline: auto; }
+  .hero-editorial .hero-image img { height: min(112vw, 570px); }
+  .hero-about { margin-top: 2.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta { transition: none; }
+}
