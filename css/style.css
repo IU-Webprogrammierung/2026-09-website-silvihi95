@@ -1950,3 +1950,155 @@ body {
 .reading-book-list.gallery {
   grid-template-columns: minmax(0, 1fr);
 }
+
+/* ========================================
+   Projekte – ruhiges Editorial-Layout
+   ======================================== */
+#uniprojekt,
+#privatprojekt {
+  padding-block: clamp(4.5rem, 8vw, 8rem);
+}
+
+#uniprojekt>h2,
+#privatprojekt>h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2.5rem, 5.5vw, 5rem);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.035em;
+  margin-bottom: 1.6rem;
+}
+
+#uniprojekt>p,
+#privatprojekt>p {
+  max-width: 69ch;
+  color: var(--color-text-muted);
+  font-size: clamp(.96rem, 1.3vw, 1.06rem);
+  line-height: 1.9;
+  margin: 0 0 1.1rem;
+}
+
+#uniprojekt>p:last-of-type,
+#privatprojekt>p:last-of-type {
+  margin-bottom: clamp(2.5rem, 5vw, 4.5rem);
+}
+
+#uniprojekt .project-card,
+#privatprojekt .project-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, .8fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 6rem);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  overflow: visible;
+}
+
+#privatprojekt .project-card {
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+}
+
+#privatprojekt .project-card>.project-gallery {
+  order: 2;
+}
+
+#privatprojekt .project-card>div:last-child {
+  order: 1;
+}
+
+#uniprojekt .project-gallery,
+#privatprojekt .project-gallery {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+#uniprojekt .project-gallery figure,
+#privatprojekt .project-gallery figure {
+  margin: 0;
+}
+
+#uniprojekt .project-gallery .gallery-button,
+#privatprojekt .project-gallery .gallery-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  cursor: zoom-in;
+  box-shadow: 0 20px 55px rgba(38, 34, 32, .10);
+}
+
+#uniprojekt .project-gallery img,
+#privatprojekt .project-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+#uniprojekt .project-gallery .gallery-button:hover img,
+#privatprojekt .project-gallery .gallery-button:hover img {
+  transform: scale(1.025);
+}
+
+#uniprojekt .project-gallery figcaption,
+#privatprojekt .project-gallery figcaption {
+  padding-top: .85rem;
+  color: var(--color-text-muted);
+  font-size: .8rem;
+  letter-spacing: .025em;
+}
+
+#uniprojekt .project-card>div:last-child,
+#privatprojekt .project-card>div:last-child {
+  min-width: 0;
+}
+
+#uniprojekt .project-card h3,
+#privatprojekt .project-card h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(2rem, 3.2vw, 3.5rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -.025em;
+  margin: 0 0 1.35rem;
+}
+
+#uniprojekt .project-card p,
+#privatprojekt .project-card p {
+  max-width: 50ch;
+  color: var(--color-text-muted);
+  line-height: 1.85;
+  margin: 0 0 1rem;
+}
+
+@media (max-width: 800px) {
+
+  #uniprojekt .project-card,
+  #privatprojekt .project-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+
+  #privatprojekt .project-card>.project-gallery,
+  #privatprojekt .project-card>div:last-child {
+    order: initial;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  #uniprojekt .project-gallery img,
+  #privatprojekt .project-gallery img {
+    transition: none;
+  }
+}
