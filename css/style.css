@@ -4206,7 +4206,7 @@ body {
 
 }
 
-/* iPhone / Smartphone: Hortensienbild an den Viewport binden,
+/* iPhone / Smartphone: dezente Hortensien, an den Viewport binden,
    statt es über die gesamte Dokumenthöhe zu skalieren. */
 @media (max-width: 767px) {
   html {
@@ -4227,10 +4227,10 @@ body {
     pointer-events: none;
     background-image:
       linear-gradient(180deg,
-        rgba(249, 240, 225, .72) 0%,
-        rgba(246, 222, 204, .64) 30%,
-        rgba(235, 168, 148, .57) 65%,
-        rgba(250, 241, 227, .72) 100%),
+        rgba(249, 240, 232, .91) 0%,
+        rgba(248, 229, 219, .88) 30%,
+        rgba(244, 208, 198, .86) 65%,
+        rgba(250, 241, 232, .91) 100%),
       url("../images/hintergrund.jpg");
     background-size: cover;
     background-position: center center;
