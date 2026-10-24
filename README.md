@@ -18,7 +18,7 @@ Im Mittelpunkt stehen eine übersichtliche Gestaltung, die Präsentation der Bil
 - **Fotografie:** Galerie mit ausgewählten Landschaftsfotografien
 - **Nebengewerbe:** Einblicke in die Arbeit von Silvis Photography
 - **Reisen:** Reiseberichte und Bilder aus Rovaniemi, Island und Südtirol
-- **Lesen:** Vorstellung zweier Bücher von Ayla Dade
+- **Buchempfehlung:** Vorstellung zweier Bücher von Ayla Dade
 - **Uni-Projekt:** Vorstellung der Sichelhenket-Website
 - **Privat-Projekt:** Vorstellung des Musikspiels My-Hits
 
