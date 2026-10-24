@@ -1,11 +1,3 @@
-/*
- * SILVIS PORTFOLIO — CSS
- * Responsive Layout: Mobile, Tablet und Desktop
- * Hinweis: Die Reihenfolge der Regeln ist für die CSS-Kaskade wichtig.
- * Bei der Bereinigung wurden nur nachweislich überflüssige
- * Media-Query-Regeln entfernt; das übrige Layout bleibt unverändert.
- */
-
 :root {
   --color-bg: #f7f3ec;
   --color-text: #262220;
@@ -20,7 +12,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+  box-sizing: border-box;ƒ
 }
 
 html {
@@ -45,10 +37,10 @@ img {
 a {
   color: var(--color-accent-dark);
   text-underline-offset: 0.2em;
-}
 
-a:hover {
-  color: var(--color-accent);
+  &:hover {
+    color: var(--color-accent);
+  }
 }
 
 h1,
@@ -94,12 +86,12 @@ section {
   scroll-margin-top: 6rem;
 }
 
+/* NAVIGATION UND HEADER */
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(247, 243, 236, 0.96);
-  border-bottom: 1px solid var(--color-line);
 }
 
 .header-inner {
@@ -109,8 +101,6 @@ section {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.75rem 1rem;
-  padding-block: 0.85rem;
 }
 
 .logo {
@@ -190,12 +180,11 @@ section {
   display: block;
   padding: 0.45rem 0;
   color: var(--color-text);
-  font-weight: 500;
   text-decoration: none;
-}
 
-.main-nav a:hover {
-  color: var(--color-accent);
+  &:hover {
+    color: var(--color-accent);
+  }
 }
 
 /* Über mich */
@@ -205,28 +194,27 @@ section {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 2rem;
 }
 
 .hero-image {
   flex-shrink: 0;
-}
 
-.hero-image img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 1px solid var(--color-line);
+  & img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--color-line);
+  }
 }
 
 .hero-text {
   min-width: 0;
   max-width: 650px;
-}
 
-.hero-text p {
-  margin-bottom: 1rem;
+  & p {
+    margin-bottom: 1rem;
+  }
 }
 
 /* Tablet und Desktop */
@@ -246,29 +234,17 @@ section {
   }
 }
 
-.social-links {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem 1.5rem;
-  justify-content: center;
-  margin: 1rem 0 0;
-  padding: 0;
-}
-
-.social-links a {
-  font-weight: 500;
-}
+/* GALERIEN UND BILDER */
 
 .gallery {
   display: grid;
   gap: 1.25rem;
   margin-top: 2rem;
-}
 
-.gallery figure {
-  margin: 0;
-  min-width: 0;
+  & figure {
+    margin: 0;
+    min-width: 0;
+  }
 }
 
 .gallery img {
@@ -287,20 +263,19 @@ section {
 
 .travel-list {
   display: grid;
-  gap: 2rem;
   margin-top: 2rem;
 }
 
 .travel-item {
   min-width: 0;
-}
 
-.travel-item img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: 4px;
-  margin-bottom: 0.75rem;
+  & img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 0.75rem;
+  }
 }
 
 .travel-item h3 {
@@ -311,46 +286,19 @@ section {
   font-size: 0.95rem;
 }
 
-.book-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  margin: 1.5rem 0 0;
-  padding: 0;
-}
-
-.book-list li {
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--color-line);
-}
-
-.book-title {
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: var(--color-text);
-}
-
-.book-author {
-  color: var(--color-text-muted);
-  font-size: 0.95rem;
-}
-
 .project-card {
   display: flex;
-  flex-direction: column;
   align-items: flex-start;
-  gap: 1rem;
   margin-top: 1.5rem;
   min-width: 0;
-}
 
-.project-card img {
-  width: 100%;
-  max-width: 340px;
-  height: auto;
-  object-fit: contain;
-  border-radius: 4px;
+  & img {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+  }
 }
 
 .project-card>* {
@@ -365,10 +313,10 @@ section {
   padding: 0.75rem 1.25rem;
   background-color: var(--color-accent-dark);
   color: white;
-}
 
-.skip-link:focus {
-  left: 0;
+  &:focus {
+    left: 0;
+  }
 }
 
 a:focus-visible,
@@ -384,10 +332,10 @@ button:focus-visible {
   text-align: center;
   font-size: 0.85rem;
   color: var(--color-text-muted);
-}
 
-.site-footer a {
-  color: var(--color-text-muted);
+  & a {
+    color: var(--color-text-muted);
+  }
 }
 
 .site-footer a:hover {
@@ -419,10 +367,6 @@ button:focus-visible {
 
 .back-to-top:hover {
   background-color: var(--color-accent-dark);
-}
-
-.social-links {
-  justify-content: flex-start;
 }
 
 .gallery {
@@ -476,16 +420,6 @@ button:focus-visible {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  .back-to-top {
-    transition: none;
-  }
-}
-
 /* Klickbare Galerien */
 
 .gallery-button {
@@ -497,10 +431,10 @@ button:focus-visible {
   background: transparent;
   cursor: zoom-in;
   overflow: hidden;
-}
 
-.gallery-button img {
-  transition: transform .25s ease;
+  & img {
+    transition: transform .25s ease;
+  }
 }
 
 .gallery-button:hover img {
@@ -515,6 +449,8 @@ button:focus-visible {
 /* Eigene Raster je Bereich, mobile-first */
 
 .landscape-gallery,
+/* NEBENGEWERBE */
+
 .business-gallery {
   grid-template-columns: 1fr;
 }
@@ -529,6 +465,8 @@ button:focus-visible {
 
 /* Dialog-Lightbox */
 
+/* LIGHTBOX */
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -541,10 +479,10 @@ button:focus-visible {
   border-radius: 12px;
   background: #1b1b1b;
   color: white;
-}
 
-.lightbox::backdrop {
-  background: rgba(0, 0, 0, .9);
+  &::backdrop {
+    background: rgba(0, 0, 0, .9);
+  }
 }
 
 .lightbox-content {
@@ -554,14 +492,14 @@ button:focus-visible {
   gap: .5rem;
   position: relative;
   padding-top: 2.5rem;
-}
 
-.lightbox-content figure {
-  grid-column: 2;
-  grid-row: 1;
-  margin: 0;
-  min-width: 0;
-  text-align: center;
+  & figure {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    min-width: 0;
+    text-align: center;
+  }
 }
 
 .lightbox-content img {
@@ -650,12 +588,6 @@ button:focus-visible {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .gallery-button img {
-    transition: none;
-  }
-}
-
 /* Reiseberichte: drei Bilder pro Reiseziel */
 
 .travel-list {
@@ -674,11 +606,11 @@ button:focus-visible {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 0.75rem;
   margin-top: 0.5rem;
-}
 
-.travel-gallery figure {
-  margin: 0;
-  min-width: 0;
+  & figure {
+    margin: 0;
+    min-width: 0;
+  }
 }
 
 .travel-gallery .gallery-button {
@@ -723,10 +655,10 @@ button:focus-visible {
   max-width: 340px;
   margin-top: 0;
   flex: 0 0 340px;
-}
 
-.project-gallery figure {
-  margin: 0;
+  & figure {
+    margin: 0;
+  }
 }
 
 .project-gallery .gallery-button {
@@ -749,23 +681,7 @@ button:focus-visible {
 
 /* Buchgalerie im Abschnitt Lesen */
 
-.book-gallery {
-  grid-template-columns: 1fr;
-  max-width: 900px;
-  margin-inline: auto;
-}
-
-.book-gallery img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-@media (min-width: 768px) {
-  .book-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
+@media (min-width: 768px) {}
 
 /* Projektkarten auf Smartphones */
 
@@ -788,9 +704,7 @@ button:focus-visible {
   }
 }
 
-/* ========================================
-   Über mich – Portfolio-Einstieg
-\\\======================================== */
+/* Über mich – Portfolio-Einstieg */
 
 .hero {
   gap: clamp(2rem, 5vw, 4rem);
@@ -829,31 +743,6 @@ button:focus-visible {
   text-transform: uppercase;
 }
 
-.hero-text h2 {
-  font-size: clamp(2.3rem, 4vw, 3.5rem);
-  margin-bottom: 1.25rem;
-}
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.65rem;
-  list-style: none;
-  margin: 1.5rem 0 0;
-  padding: 0;
-}
-
-.hero-tags li {
-  padding: 0.4rem 0.85rem;
-  border: 1px solid rgba(75, 99, 85, 0.3);
-  border-radius: 999px;
-  background: rgba(220, 229, 217, 0.45);
-  color: var(--color-accent-dark);
-  font-size: 0.85rem;
-  font-weight: 500;
-}
-
 @media (min-width: 768px) {
   .hero-image img {
     width: clamp(250px, 25vw, 320px);
@@ -863,6 +752,8 @@ button:focus-visible {
 
 /* Finale Fotogalerie: kompakter Magazin-Block mit Bildtiteln */
 
+/* FOTOGRAFIE */
+
 .landscape-gallery {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
@@ -870,15 +761,15 @@ button:focus-visible {
   max-width: 1000px;
   margin: 2rem auto 0;
   align-items: stretch;
-}
 
-.landscape-gallery figure {
-  position: relative;
-  margin: 0;
-  min-width: 0;
-  overflow: hidden;
-  border-radius: 10px;
-  background: #e4dfd6;
+  & figure {
+    position: relative;
+    margin: 0;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #e4dfd6;
+  }
 }
 
 .landscape-gallery .gallery-button {
@@ -972,12 +863,6 @@ button:focus-visible {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .landscape-gallery .gallery-button img {
-    transition: none;
-  }
-}
-
 /* Hintergrund im Stil von Silvis Photography:
    Creme -> warmes Pfirsichrosa -> sanftes Creme,
    mit dezent sichtbarem eigenen Makrofoto. */
@@ -996,7 +881,6 @@ body {
   background-size: 100% 100%, cover;
   background-position: center, center;
   background-repeat: no-repeat;
-  background-attachment: scroll, fixed;
 }
 
 @media (max-width: 767px) {
@@ -1015,11 +899,11 @@ body {
   max-width: 900px;
   margin: 2rem auto 0;
   align-items: start;
-}
 
-.business-gallery figure {
-  margin: 0;
-  min-width: 0;
+  & figure {
+    margin: 0;
+    min-width: 0;
+  }
 }
 
 .business-gallery .gallery-button {
@@ -1053,10 +937,9 @@ body {
   }
 }
 
-/* =======================================================
-   Editorial Hero – neuer Portfolio-Einstieg
-   Alle bestehenden Galerien, Lightbox und Hintergrund bleiben.
-   \======================================================= */
+/* Editorial Hero – neuer Portfolio-Einstieg */
+
+/* EDITORIAL HERO */
 
 .hero-editorial {
   position: relative;
@@ -1075,7 +958,7 @@ body {
 }
 
 .hero-editorial .hero-eyebrow {
-  font-family: 'DM Sans', var(--font-body);
+  font-family: "DM Sans", var(--font-body);
   font-size: .71rem;
   font-weight: 700;
   letter-spacing: .19em;
@@ -1084,7 +967,7 @@ body {
 }
 
 .hero-editorial h1 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-weight: 500;
   font-size: clamp(3.8rem, 6.6vw, 7rem);
   line-height: 1.06;
@@ -1099,7 +982,7 @@ body {
 }
 
 .hero-editorial .hero-lead {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-style: italic;
   font-size: clamp(1.65rem, 2.6vw, 2.7rem);
   line-height: 1.25;
@@ -1109,53 +992,13 @@ body {
 
 .hero-editorial .hero-intro {
   max-width: 510px;
-  font-family: 'DM Sans', var(--font-body);
+  font-family: "DM Sans", var(--font-body);
   font-size: clamp(.98rem, 1.2vw, 1.1rem);
   line-height: 1.85;
   color: #554e49;
   margin: 0;
 }
 
-.hero-actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1.25rem 1.8rem;
-  margin-top: 2rem;
-}
-
-.hero-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 1.7rem;
-  background: #4b6355;
-  border: 1px solid #4b6355;
-  color: #fff;
-  padding: .85rem 1.25rem;
-  font-family: 'DM Sans', var(--font-body);
-  font-size: .88rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background .2s ease, transform .2s ease;
-}
-
-.hero-cta:hover {
-  background: #364a3f;
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-.hero-link {
-  display: inline-flex;
-  align-items: center;
-  gap: .75rem;
-  font-family: 'DM Sans', var(--font-body);
-  font-size: .9rem;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid #4b6355;
-  padding-bottom: .2rem;
-}
 
 .hero-about {
   border-top: 1px solid rgba(64, 66, 53, .25);
@@ -1168,7 +1011,7 @@ body {
   display: block;
   margin-bottom: .65rem;
   color: #5b6b5e;
-  font-family: 'DM Sans', var(--font-body);
+  font-family: "DM Sans", var(--font-body);
   font-size: .69rem;
   font-weight: 700;
   letter-spacing: .15em;
@@ -1195,7 +1038,7 @@ body {
 }
 
 .hero-editorial .hero-image::before {
-  content: '';
+  content: "";
   position: absolute;
   inset: -18px -19px 18px 19px;
   z-index: -1;
@@ -1218,7 +1061,7 @@ body {
 
 .hero-image-caption {
   display: block;
-  font-family: 'DM Sans', var(--font-body);
+  font-family: "DM Sans", var(--font-body);
   font-size: .66rem;
   font-weight: 700;
   letter-spacing: .16em;
@@ -1231,7 +1074,7 @@ body {
   right: 0;
   bottom: 3.1rem;
   writing-mode: vertical-rl;
-  font-family: 'DM Sans', var(--font-body);
+  font-family: "DM Sans", var(--font-body);
   font-size: .64rem;
   font-weight: 700;
   letter-spacing: .16em;
@@ -1289,16 +1132,7 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .hero-cta {
-    transition: none;
-  }
-}
-
-/* =====================================================
-   Editorial – Fotografie & Nebengewerbe
-   Bestehender Hero, Hintergrund und Lightbox unverändert
-   \===================================================== */
+/* Editorial – Fotografie & Nebengewerbe */
 
 #fotografie.editorial-content-section,
 #nebengewerbe.editorial-content-section {
@@ -1318,13 +1152,13 @@ body {
 .editorial-kicker,
 .editorial-gallery-label {
   display: block;
-  font: 700 .7rem/1.5 'DM Sans', sans-serif;
+  font: 700 .7rem/1.5 "DM Sans", sans-serif;
   letter-spacing: .2em;
   color: #526b59;
 }
 
 .editorial-section-heading h2 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(3.2rem, 6vw, 6.5rem);
   line-height: 1.09;
   font-weight: 500;
@@ -1340,7 +1174,7 @@ body {
 }
 
 .editorial-section-copy p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: clamp(.98rem, 1.15vw, 1.08rem);
   line-height: 1.85;
   color: #504a45;
@@ -1349,7 +1183,7 @@ body {
 }
 
 .editorial-section-copy p:first-child {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: "Playfair Display", Georgia, serif;
   font-size: clamp(1.2rem, 1.6vw, 1.6rem);
   line-height: 1.45;
   color: #393731;
@@ -1399,7 +1233,7 @@ body {
 
 #nebengewerbe .business-gallery figcaption {
   text-align: left;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: .8rem;
   letter-spacing: .025em;
   margin-top: .8rem;
@@ -1416,14 +1250,14 @@ body {
   display: inline-flex;
   border-bottom: 1px solid #4b6355;
   padding-bottom: .45rem;
-  font: 600 .9rem/1.5 'DM Sans', sans-serif;
+  font: 600 .9rem/1.5 "DM Sans", sans-serif;
   color: #354d40;
   text-decoration: none;
   transition: transform .2s ease;
-}
 
-.editorial-external-link:hover {
-  transform: translateY(-2px);
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 @media (max-width: 780px) {
@@ -1454,18 +1288,7 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-
-  #nebengewerbe .business-gallery .gallery-button img,
-  .editorial-external-link {
-    transition: none;
-  }
-}
-
-/* =============================================
-   REISEN – EDITORIAL-REISETAGEBUCH
-   Ergänzung: bestehende Bereiche bleiben erhalten
-   ============================================= */
+/* REISEN – EDITORIAL-REISETAGEBUCH */
 
 .travel-editorial-section {
   padding-block: clamp(4rem, 8vw, 7rem);
@@ -1481,6 +1304,8 @@ body {
   gap: clamp(4.5rem, 8vw, 8rem);
   margin-top: 0;
 }
+
+/* REISEN */
 
 .travel-editorial-item {
   display: grid;
@@ -1621,9 +1446,7 @@ body {
   }
 }
 
-/* ========================================
-   Lesen – Editorial-Buchporträts
-   ======================================== */
+/* Lesen – Editorial-Buchporträts */
 
 .reading-editorial-section {
   padding-block: clamp(4rem, 8vw, 7rem);
@@ -1650,6 +1473,8 @@ body {
   gap: clamp(2.5rem, 5vw, 5rem);
   margin-top: 1.6rem;
 }
+
+/* LESEN */
 
 .reading-book {
   display: grid;
@@ -1683,16 +1508,16 @@ body {
   background: none;
   cursor: zoom-in;
   overflow: hidden;
-}
 
-.reading-book-cover img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: contain;
-  border-radius: 2px;
-  transition: transform .25s ease;
+  & img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: contain;
+    border-radius: 2px;
+    transition: transform .25s ease;
+  }
 }
 
 .reading-book-cover:hover img {
@@ -1745,22 +1570,7 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .reading-book-cover img {
-    transition: none;
-  }
-}
-
-/* ========================================
-   Header – leichter, ruhiger Editorial-Look
-   ======================================== */
-
-.site-header {
-  background: rgba(255, 255, 255, 0.72);
-  -webkit-backdrop-filter: blur(18px);
-  backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(38, 34, 32, 0.09);
-}
+/* Header – Typografie und Navigation */
 
 .header-inner {
   gap: 1rem 2rem;
@@ -1787,15 +1597,7 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .main-nav a {
-    transition: none;
-  }
-}
-
-/* ========================================
-   Header und Seitenhintergrund nahtlos verbinden
-   ======================================== */
+/* Header und Seitenhintergrund nahtlos verbinden */
 
 body {
   background-attachment: fixed;
@@ -1822,9 +1624,7 @@ body {
   grid-template-columns: minmax(0, 1fr);
 }
 
-/* ========================================
-   Projekte – ruhiges Editorial-Layout
-   ======================================== */
+/* Projekte – ruhiges Editorial-Layout */
 
 #uniprojekt,
 #privatprojekt {
@@ -1967,14 +1767,6 @@ body {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
-
-  #uniprojekt .project-gallery img,
-  #privatprojekt .project-gallery img {
-    transition: none;
-  }
-}
-
 /* iPhone / Smartphone: dezente Hortensien, an den Viewport binden,
    statt es über die gesamte Dokumenthöhe zu skalieren. */
 @media (max-width: 767px) {
@@ -2012,4 +1804,41 @@ body {
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
   }
-}ƒ
+}
+
+/* Barrierefreiheit: Animationen und Übergänge bei reduziertem Bewegungswunsch deaktivieren. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .back-to-top {
+    transition: none;
+  }
+
+  .gallery-button img {
+    transition: none;
+  }
+
+  .landscape-gallery .gallery-button img {
+    transition: none;
+  }
+
+  #nebengewerbe .business-gallery .gallery-button img,
+  .editorial-external-link {
+    transition: none;
+  }
+
+  .reading-book-cover img {
+    transition: none;
+  }
+
+  .main-nav a {
+    transition: none;
+  }
+
+  #uniprojekt .project-gallery img,
+  #privatprojekt .project-gallery img {
+    transition: none;
+  }
+}

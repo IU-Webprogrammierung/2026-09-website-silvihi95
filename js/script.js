@@ -1,9 +1,7 @@
 
 "use strict";
 
-/* =========================================
-   1. Mobile Navigation
-========================================= */
+/* 1. Mobile Navigation */
 
 const navToggle = document.getElementById("navToggle");
 const mainNav = document.getElementById("mainNav");
@@ -33,9 +31,7 @@ if (navToggle && mainNav) {
 }
 
 
-/* =========================================
-   2. Back-to-Top Button
-========================================= */
+/* 2. Back-to-Top Button */
 
 const backToTopBtn = document.getElementById("backToTop");
 
@@ -70,9 +66,7 @@ if (backToTopBtn) {
 }
 
 
-/* =========================================
-   3. Lightbox für Galerien
-========================================= */
+/* 3. Lightbox für Galerien */
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
