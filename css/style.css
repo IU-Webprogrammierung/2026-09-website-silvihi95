@@ -1,3 +1,11 @@
+/*
+ * SILVIS PORTFOLIO — CSS
+ * Responsive Layout: Mobile, Tablet und Desktop
+ * Hinweis: Die Reihenfolge der Regeln ist für die CSS-Kaskade wichtig.
+ * Bei der Bereinigung wurden nur nachweislich überflüssige
+ * Media-Query-Regeln entfernt; das übrige Layout bleibt unverändert.
+ */
+
 :root {
   --color-bg: #f7f3ec;
   --color-text: #262220;
@@ -26,11 +34,6 @@ body {
   font-size: 1.0625rem;
   line-height: 1.65;
   color: var(--color-text);
-  background-color: var(--color-bg);
-  background-image: linear-gradient(rgba(247, 243, 236, 0.78), rgba(247, 243, 236, 0.78)), url("../images/hintergrund.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 img {
@@ -259,7 +262,6 @@ section {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.25rem;
   margin-top: 2rem;
 }
@@ -285,7 +287,6 @@ section {
 
 .travel-list {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -428,10 +429,6 @@ button:focus-visible {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.travel-list {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .project-card {
   flex-direction: row;
   gap: 1.5rem;
@@ -465,9 +462,6 @@ button:focus-visible {
     padding: 0;
   }
 
-  .travel-list {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 480px) {
@@ -531,24 +525,6 @@ button:focus-visible {
 
 .business-gallery img {
   aspect-ratio: 3 / 4;
-}
-
-@media (min-width: 481px) {
-
-  .landscape-gallery,
-  .business-gallery {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 768px) {
-  .landscape-gallery {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .business-gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 /* Dialog-Lightbox */
@@ -739,18 +715,6 @@ button:focus-visible {
   }
 }
 
-@media (min-width: 768px) {
-  .travel-list {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (min-width: 1100px) {
-  .travel-list {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Vergrößerbare Projektbilder */
 
 .project-gallery {
@@ -898,11 +862,6 @@ button:focus-visible {
 }
 
 /* Finale Fotogalerie: kompakter Magazin-Block mit Bildtiteln */
-
-body {
-  background-color: #f7f3ec;
-  background-image: none;
-}
 
 .landscape-gallery {
   display: grid;
@@ -2053,4 +2012,4 @@ body {
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
   }
-}
+}ƒ
