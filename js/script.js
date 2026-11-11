@@ -105,8 +105,10 @@ if (
         const figure = button.closest("figure");
         const caption = figure.querySelector("figcaption");
 
-        lightboxImage.src = image.src;
+
+        lightboxImage.src = image.dataset.src || image.src;
         lightboxImage.alt = image.alt;
+
 
         lightboxCaption.textContent =
             caption ? caption.textContent : "";
