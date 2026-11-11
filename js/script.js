@@ -149,6 +149,7 @@ if (
         lastFocusedElement = null;
     });
 
+
     // Alle Galerien unabhängig voneinander einrichten
     document.querySelectorAll(".gallery").forEach((gallery) => {
 
@@ -162,7 +163,25 @@ if (
             });
         });
 
+        // Weitere Bilder über den Mehr-anzeigen-Button öffnen
+        const moreButton = gallery.nextElementSibling;
+
+        if (moreButton?.classList.contains("gallery-more-button")) {
+            moreButton.addEventListener("click", () => {
+
+                const firstExtraIndex = buttons.findIndex((button) =>
+                    button.closest("figure")?.hidden
+                );
+
+                if (firstExtraIndex !== -1) {
+                    openLightbox(gallery, firstExtraIndex);
+                }
+
+            });
+        }
+
     });
+
 
     // Schließen-Button
     closeButton.addEventListener("click", closeLightbox);
