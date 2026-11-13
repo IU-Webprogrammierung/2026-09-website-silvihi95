@@ -1,13 +1,20 @@
 
 "use strict";
 
-/* 1. Mobile Navigation */
+/* =========================================
+   1. Mobile Navigation
+========================================= */
 
 const navToggle = document.getElementById("navToggle");
 const mainNav = document.getElementById("mainNav");
 
 if (navToggle && mainNav) {
-    // Hamburger-Menü öffnen und schließen
+    function closeMobileNav() {
+        mainNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+        navToggle.setAttribute("aria-label", "Menü öffnen");
+    }
+
     navToggle.addEventListener("click", () => {
         const isOpen = mainNav.classList.toggle("is-open");
 
@@ -18,23 +25,37 @@ if (navToggle && mainNav) {
         );
     });
 
-    // Menü nach Auswahl eines Links schließen
     mainNav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-            mainNav.classList.remove("is-open");
-
-            navToggle.setAttribute("aria-expanded", "false");
-            navToggle.setAttribute("aria-label", "Menü öffnen");
-        });
+        link.addEventListener("click", closeMobileNav);
     });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" &&
+            mainNav.classList.contains("is-open")) {
+            closeMobileNav();
+            navToggle.focus();
+        }
+    });
+
+    const desktopQuery = window.matchMedia("(min-width: 68.75rem)");
+
+    function handleDesktopChange(event) {
+        if (event.matches) {
+            closeMobileNav();
+        }
+    }
+
+    desktopQuery.addEventListener("change", handleDesktopChange);
 }
 
-/* 2. Back-to-Top Button */
+
+/* =========================================
+   2. Back-to-Top
+========================================= */
 
 const backToTopBtn = document.getElementById("backToTop");
 
 if (backToTopBtn) {
-    // Button beim Scrollen ein- und ausblenden
     function updateBackToTop() {
         backToTopBtn.classList.toggle(
             "is-visible",
@@ -46,10 +67,8 @@ if (backToTopBtn) {
         passive: true
     });
 
-    // Sichtbarkeit direkt beim Laden prüfen
     updateBackToTop();
 
-    // Zurück nach oben scrollen
     backToTopBtn.addEventListener("click", () => {
         const reducedMotion = window.matchMedia(
             "(prefers-reduced-motion: reduce)"
@@ -62,7 +81,70 @@ if (backToTopBtn) {
     });
 }
 
-/* 3. Lightbox für Galerien */
+
+/* =========================================
+   3. Galerien: Mehr / Weniger anzeigen
+========================================= */
+
+document.querySelectorAll(".gallery").forEach((gallery) => {
+    const moreButton = gallery.nextElementSibling;
+
+    if (!moreButton?.classList.contains("gallery-more-button")) {
+        return;
+    }
+
+    const extraFigures = [
+        ...gallery.querySelectorAll("figure[hidden]")
+    ];
+
+    if (extraFigures.length === 0) {
+        moreButton.hidden = true;
+        return;
+    }
+
+    let isExpanded = false;
+
+    moreButton.setAttribute("aria-expanded", "false");
+
+    moreButton.addEventListener("click", () => {
+        isExpanded = !isExpanded;
+
+        extraFigures.forEach((figure) => {
+            if (isExpanded) {
+                const image = figure.querySelector("img[data-src]");
+
+                if (image) {
+                    image.src = image.dataset.src;
+                    image.loading = "lazy";
+                    image.removeAttribute("data-src");
+                }
+            }
+
+            figure.hidden = !isExpanded;
+        });
+
+        moreButton.textContent = isExpanded
+            ? "Weniger anzeigen"
+            : "Mehr anzeigen";
+
+        moreButton.setAttribute(
+            "aria-expanded",
+            String(isExpanded)
+        );
+
+        moreButton.setAttribute(
+            "aria-label",
+            isExpanded
+                ? "Zusätzliche Bilder ausblenden"
+                : "Weitere Bilder anzeigen"
+        );
+    });
+});
+
+
+/* =========================================
+   4. Lightbox
+========================================= */
 
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
@@ -73,7 +155,6 @@ const closeButton = document.querySelector(".lightbox-close");
 const prevButton = document.querySelector(".lightbox-prev");
 const nextButton = document.querySelector(".lightbox-next");
 
-// Aktuell geöffnete Galerie
 let activeGallery = [];
 let currentImageIndex = 0;
 let touchStartX = null;
@@ -88,7 +169,21 @@ if (
     prevButton &&
     nextButton
 ) {
-    // Bild und Beschriftung aktualisieren
+
+    /* Sichtbare Bilder einer Galerie ermitteln */
+
+    function getVisibleButtons(gallery) {
+        return [
+            ...gallery.querySelectorAll(".gallery-button")
+        ].filter((button) => {
+            const figure = button.closest("figure");
+            return figure && !figure.hidden;
+        });
+    }
+
+
+    /* Aktuelles Bild anzeigen */
+
     function showImage(index) {
         if (activeGallery.length === 0) return;
 
@@ -98,95 +193,95 @@ if (
         const button = activeGallery[currentImageIndex];
         const image = button.querySelector("img");
         const figure = button.closest("figure");
-        const caption = figure.querySelector("figcaption");
+        const caption = figure?.querySelector("figcaption");
+
+        if (!image) return;
 
         lightboxImage.src = image.dataset.src || image.src;
         lightboxImage.alt = image.alt;
 
         lightboxCaption.textContent =
-            caption ? caption.textContent : "";
+            caption?.textContent?.trim() || "";
 
         lightboxCounter.textContent =
             `${currentImageIndex + 1} / ${activeGallery.length}`;
     }
 
-    // Lightbox öffnen
-    function openLightbox(gallery, index) {
-        activeGallery = [
-            ...gallery.querySelectorAll(".gallery-button")
-        ];
 
-        // Ursprünglich fokussiertes Element merken
+    /* Lightbox öffnen */
+
+    function openLightbox(gallery, button) {
+        activeGallery = getVisibleButtons(gallery);
+
+        const index = activeGallery.indexOf(button);
+
+        if (index === -1 || activeGallery.length === 0) {
+            return;
+        }
+
         lastFocusedElement = document.activeElement;
 
         showImage(index);
         lightbox.showModal();
 
-        // Fokus auf den Schließen-Button setzen
         closeButton.focus();
     }
 
-    // Lightbox schließen
+
+    /* Lightbox schließen */
+
     function closeLightbox() {
-        lightbox.close();
+        if (lightbox.open) {
+            lightbox.close();
+        }
     }
 
-    // Tastaturfokus nach dem Schließen wiederherstellen
+
+    /* Fokus nach dem Schließen wiederherstellen */
+
     lightbox.addEventListener("close", () => {
         if (
-            lastFocusedElement &&
-            lastFocusedElement.isConnected &&
+            lastFocusedElement?.isConnected &&
             typeof lastFocusedElement.focus === "function"
         ) {
             lastFocusedElement.focus();
         }
 
         lastFocusedElement = null;
+        activeGallery = [];
+        touchStartX = null;
     });
 
-    // Alle Galerien unabhängig voneinander einrichten
-    document.querySelectorAll(".gallery").forEach((gallery) => {
-        const buttons = [
-            ...gallery.querySelectorAll(".gallery-button")
-        ];
 
-        buttons.forEach((button, index) => {
+    /* Klick auf ein Galeriebild */
+
+    document.querySelectorAll(".gallery").forEach((gallery) => {
+        gallery.querySelectorAll(".gallery-button").forEach((button) => {
             button.addEventListener("click", () => {
-                openLightbox(gallery, index);
+                openLightbox(gallery, button);
             });
         });
-
-        // Weitere Bilder über den Mehr-anzeigen-Button öffnen
-        const moreButton = gallery.nextElementSibling;
-
-        if (moreButton?.classList.contains("gallery-more-button")) {
-            moreButton.addEventListener("click", () => {
-                const firstExtraIndex = buttons.findIndex((button) =>
-                    button.closest("figure")?.hidden
-                );
-
-                if (firstExtraIndex !== -1) {
-                    openLightbox(gallery, firstExtraIndex);
-                }
-            });
-        }
     });
 
-    // Schließen-Button
+
+    /* Navigation innerhalb der Lightbox */
+
     closeButton.addEventListener("click", closeLightbox);
 
-    // Vorheriges Bild
     prevButton.addEventListener("click", () => {
         showImage(currentImageIndex - 1);
     });
 
-    // Nächstes Bild
     nextButton.addEventListener("click", () => {
         showImage(currentImageIndex + 1);
     });
 
-    // Tastatursteuerung
+
+    /* Tastatursteuerung */
+
     lightbox.addEventListener("keydown", (event) => {
+        if (!lightbox.open) return;
+
         if (event.key === "ArrowLeft") {
             event.preventDefault();
             showImage(currentImageIndex - 1);
@@ -198,30 +293,39 @@ if (
         }
     });
 
-    // Klick außerhalb des Bildbereichs
+
+    /* Klick auf den Dialog-Hintergrund */
+
     lightbox.addEventListener("click", (event) => {
         if (event.target === lightbox) {
             closeLightbox();
         }
     });
 
-    // Touch-Gesten auf Smartphones
+
+    /* Touch-Gesten auf Smartphones */
+
     lightbox.addEventListener("touchstart", (event) => {
+        if (!lightbox.open || event.changedTouches.length === 0) {
+            return;
+        }
+
         touchStartX = event.changedTouches[0].screenX;
     }, { passive: true });
 
     lightbox.addEventListener("touchend", (event) => {
-        if (touchStartX === null) return;
+        if (touchStartX === null ||
+            event.changedTouches.length === 0) {
+            return;
+        }
 
         const touchEndX = event.changedTouches[0].screenX;
         const difference = touchEndX - touchStartX;
 
         if (Math.abs(difference) > 50) {
-            if (difference > 0) {
-                showImage(currentImageIndex - 1);
-            } else {
-                showImage(currentImageIndex + 1);
-            }
+            showImage(
+                currentImageIndex + (difference > 0 ? -1 : 1)
+            );
         }
 
         touchStartX = null;

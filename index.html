@@ -93,7 +93,7 @@
         </div>
       </div>
       <div class="editorial-gallery-label">Ausgewählte Landschaften</div>
-      <div class="gallery landscape-gallery" role="group" aria-label="Landschaftsfotografien">
+      <div class="gallery landscape-gallery" id="gallery-landschaft" role="group" aria-label="Landschaftsfotografien">
         <figure>
           <button class="gallery-button" type="button" aria-label="Foto vom Sonnenaufgang am Achensee vergrößern">
             <img src="images/landschaft-1.jpg"
@@ -129,41 +129,46 @@
         <figure hidden>
           <button class="gallery-button" type="button" aria-label="Foto vom Hintersee bei Sonnenaufgang vergrößern">
             <img data-src="images/landschaft-5.jpg"
-              alt="Bergsee im Morgenlicht mit rosa Himmel, golden beleuchteten Gipfeln und Spiegelungen im Wasser">
+              alt="Bergsee im Morgenlicht mit rosa Himmel, golden beleuchteten Gipfeln und Spiegelungen im Wasser"
+              width="1365" height="2048">
           </button>
           <figcaption>Morgenstimmung am Bergsee</figcaption>
         </figure>
         <figure hidden>
           <button class="gallery-button" type="button" aria-label="Foto vom Sternenhimmel vergrößern">
             <img data-src="images/landschaft-6.jpg"
-              alt="Sternenreicher Nachthimmel über einem beleuchteten Haus vor einer Bergkulisse">
+              alt="Sternenreicher Nachthimmel über einem beleuchteten Haus vor einer Bergkulisse" width="1365"
+              height="2048">
           </button>
           <figcaption>Unter dem Sternenhimmel</figcaption>
         </figure>
         <figure hidden>
           <button class="gallery-button" type="button" aria-label="Foto von Bootshäusern am See vergrößern">
             <img data-src="images/landschaft-7.jpg"
-              alt="Zwei dunkle hölzerne Bootshäuser am See mit orangefarbenem Herbstwald im Hintergrund">
+              alt="Zwei dunkle hölzerne Bootshäuser am See mit orangefarbenem Herbstwald im Hintergrund" width="1365"
+              height="2048">
           </button>
           <figcaption>Herbstfarben am See</figcaption>
         </figure>
         <figure hidden>
           <button class="gallery-button" type="button" aria-label="Foto vom Wasserfall vergrößern">
             <img data-src="images/landschaft-8.jpg"
-              alt="Wasserfall zwischen moosbewachsenen Felsen und grünen Pflanzen im Sonnenlicht">
+              alt="Wasserfall zwischen moosbewachsenen Felsen und grünen Pflanzen im Sonnenlicht" width="1365"
+              height="2048">
           </button>
           <figcaption>Zwischen Felsen und Wasser</figcaption>
         </figure>
         <figure hidden>
           <button class="gallery-button" type="button" aria-label="Foto von Bergen im Abendlicht vergrößern">
             <img data-src="images/landschaft-9.jpg"
-              alt="Verschneite Berglandschaft mit goldenen Gräsern im Vordergrund und warmem Abendlicht">
+              alt="Verschneite Berglandschaft mit goldenen Gräsern im Vordergrund und warmem Abendlicht" width="1365"
+              height="2048">
           </button>
           <figcaption>Goldenes Licht in den Bergen</figcaption>
         </figure>
       </div>
-      <button class="gallery-more-button" type="button" aria-label="Weitere Landschaftsfotografien ansehen">Mehr
-        anzeigen</button>
+      <button class="gallery-more-button" type="button" aria-controls="gallery-landschaft" aria-expanded="false"
+        aria-label="Weitere Landschaftsfotografien anzeigen">Mehr anzeigen</button>
     </section>
 
     <!-- Nebengewerbe: Shootings -->
@@ -249,7 +254,7 @@
             </p>
           </div>
           <div class="travel-gallery-wrapper">
-            <div class="gallery travel-gallery" role="group" aria-label="Bilder aus Rovaniemi">
+            <div class="gallery travel-gallery" id="gallery-lappland" role="group" aria-label="Bilder aus Rovaniemi">
               <figure>
                 <button class="gallery-button" type="button"
                   aria-label="Foto von der gemütlichen Feuerstelle vergrößern">
@@ -280,27 +285,30 @@
                 <button class="gallery-button" type="button"
                   aria-label="Foto einer Feuerstelle im verschneiten Wald vergrößern">
                   <img data-src="images/reise-lappland-4.jpg"
-                    alt="Brennendes Feuer vor einer rustikalen Holzhütte in einem leicht verschneiten Nadelwald">
+                    alt="Brennendes Feuer vor einer rustikalen Holzhütte in einem leicht verschneiten Nadelwald"
+                    width="1369" height="2048">
                 </button>
                 <figcaption>Wärme mitten im Winterwald</figcaption>
               </figure>
               <figure hidden>
                 <button class="gallery-button" type="button" aria-label="Foto einer verschneiten Holzbrücke vergrößern">
                   <img data-src="images/reise-lappland-5.jpg"
-                    alt="Schneebedeckte Holzbrücke führt durch einen winterlichen Wald mit Birken und Nadelbäumen">
+                    alt="Schneebedeckte Holzbrücke führt durch einen winterlichen Wald mit Birken und Nadelbäumen"
+                    width="1369" height="2048">
                 </button>
                 <figcaption>Stille Wege durch Lappland</figcaption>
               </figure>
               <figure hidden>
                 <button class="gallery-button" type="button" aria-label="Foto der Nordlichter vergrößern">
                   <img data-src="images/reise-lappland-6.jpg"
-                    alt="Grüne Nordlichter ziehen über den sternenklaren Nachthimmel oberhalb dunkler Baumkronen">
+                    alt="Grüne Nordlichter ziehen über den sternenklaren Nachthimmel oberhalb dunkler Baumkronen"
+                    width="1369" height="2048">
                 </button>
                 <figcaption>Nordlichter über Lappland</figcaption>
               </figure>
             </div>
-            <button class="gallery-more-button" type="button" aria-label="Weitere Lappland-Fotografien ansehen">Mehr
-              anzeigen</button>
+            <button class="gallery-more-button" type="button" aria-controls="gallery-lappland" aria-expanded="false"
+              aria-label="Weitere Lappland-Fotografien anzeigen">Mehr anzeigen</button>
           </div>
         </article>
 
@@ -328,7 +336,7 @@
             </p>
           </div>
           <div class="travel-gallery-wrapper">
-            <div class="gallery travel-gallery" role="group" aria-label="Bilder aus Island">
+            <div class="gallery travel-gallery" id="gallery-island" role="group" aria-label="Bilder aus Island">
               <figure>
                 <button class="gallery-button" type="button" aria-label="Foto von Gullfoss vergrößern">
                   <img src="images/reise-island-1.jpg"
@@ -356,27 +364,30 @@
               <figure hidden>
                 <button class="gallery-button" type="button" aria-label="Foto eines Wasserfalls in Island vergrößern">
                   <img data-src="images/reise-island-4.jpg"
-                    alt="Breiter Wasserfall mit mehreren Wasserläufen, die über dunkle Felsen in einen Fluss stürzen">
+                    alt="Breiter Wasserfall mit mehreren Wasserläufen, die über dunkle Felsen in einen Fluss stürzen"
+                    width="2048" height="1234">
                 </button>
                 <figcaption>Wasserfall in Islands grüner Landschaft</figcaption>
               </figure>
               <figure hidden>
                 <button class="gallery-button" type="button" aria-label="Foto eines Vulkankraters mit See vergrößern">
                   <img data-src="images/reise-island-5.jpg"
-                    alt="Türkisblauer Kratersee, umgeben von steilen rotbraunen Vulkanhängen unter blauem Himmel">
+                    alt="Türkisblauer Kratersee, umgeben von steilen rotbraunen Vulkanhängen unter blauem Himmel"
+                    width="2048" height="1425">
                 </button>
                 <figcaption>Vulkankrater Kerið</figcaption>
               </figure>
               <figure hidden>
                 <button class="gallery-button" type="button" aria-label="Foto von Islandpferden vergrößern">
                   <img data-src="images/reise-island-6.jpg"
-                    alt="Mehrere zottelige Islandpferde stehen auf steinigem Boden vor einer weiten Landschaft">
+                    alt="Mehrere zottelige Islandpferde stehen auf steinigem Boden vor einer weiten Landschaft"
+                    width="1365" height="2048">
                 </button>
                 <figcaption>Islandpferde in der weiten Landschaft</figcaption>
               </figure>
             </div>
-            <button class="gallery-more-button" type="button" aria-label="Weitere Island-Fotografien ansehen">Mehr
-              anzeigen</button>
+            <button class="gallery-more-button" type="button" aria-controls="gallery-island" aria-expanded="false"
+              aria-label="Weitere Island-Fotografien anzeigen">Mehr anzeigen</button>
           </div>
         </article>
 
@@ -404,7 +415,7 @@
             </p>
           </div>
           <div class="travel-gallery-wrapper">
-            <div class="gallery travel-gallery" role="group" aria-label="Bilder aus Südtirol">
+            <div class="gallery travel-gallery" id="gallery-suedtirol" role="group" aria-label="Bilder aus Südtirol">
 
               <figure>
                 <button class="gallery-button" type="button" aria-label="Foto vom Kronplatz vergrößern">
@@ -434,7 +445,8 @@
               <figure hidden>
                 <button class="gallery-button" type="button" aria-label="Foto eines Bergsees in Südtirol vergrößern">
                   <img data-src="images/reise-suedtirol-4.jpg"
-                    alt="Verschneite Berggipfel über einem ruhigen See, eingerahmt von Nadelbäumen">
+                    alt="Verschneite Berggipfel über einem ruhigen See, eingerahmt von Nadelbäumen" width="1366"
+                    height="2048">
                 </button>
                 <figcaption>Winterliche Bergkulisse am See</figcaption>
               </figure>
@@ -442,20 +454,22 @@
                 <button class="gallery-button" type="button"
                   aria-label="Foto eines verschneiten Bergpanoramas vergrößern">
                   <img data-src="images/reise-suedtirol-5.jpg"
-                    alt="Schneebedeckte Berggipfel mit sonnigen Hängen und dunklen Nadelwäldern">
+                    alt="Schneebedeckte Berggipfel mit sonnigen Hängen und dunklen Nadelwäldern" width="1365"
+                    height="2048">
                 </button>
                 <figcaption>Schneebedeckte Gipfel im Sonnenlicht</figcaption>
               </figure>
               <figure hidden>
                 <button class="gallery-button" type="button" aria-label="Makrofoto von Eiskristallen vergrößern">
                   <img data-src="images/reise-suedtirol-6.jpg"
-                    alt="Makroaufnahme von Eiskristallen mit feinen Strukturen in bläulichen Farbtönen">
+                    alt="Makroaufnahme von Eiskristallen mit feinen Strukturen in bläulichen Farbtönen" width="1365"
+                    height="2048">
                 </button>
                 <figcaption>Makroaufnahme von Eiskristallen</figcaption>
               </figure>
             </div>
-            <button class="gallery-more-button" type="button" aria-label="Weitere Südtirol-Fotografien ansehen">Mehr
-              anzeigen</button>
+            <button class="gallery-more-button" type="button" aria-controls="gallery-suedtirol" aria-expanded="false"
+              aria-label="Weitere Südtirol-Fotografien anzeigen">Mehr anzeigen</button>
           </div>
         </article>
       </div>
@@ -484,7 +498,8 @@
         <figure class="reading-book reading-book-winter">
           <button class="gallery-button reading-book-cover" type="button" aria-label="Like Snow We Fall vergrößern">
             <img src="images/buch-like-snow-we-fall.png"
-              alt="Like Snow We Fall von Ayla Dade mit warmer Lichterkette auf weißem Hintergrund" loading="lazy">
+              alt="Like Snow We Fall von Ayla Dade mit warmer Lichterkette auf weißem Hintergrund" width="1283"
+              height="1226" loading="lazy">
           </button>
           <figcaption>
             <span class="reading-book-label">01 / Winter Dreams</span>
@@ -500,7 +515,8 @@
         <figure class="reading-book reading-book-summer">
           <button class="gallery-button reading-book-cover" type="button" aria-label="Wanna Be My Lover vergrößern">
             <img src="images/buch-wanna-be-my-lover.png"
-              alt="Wanna Be My Lover von Ayla Dade mit warmer Lichterkette auf weißem Hintergrund" loading="lazy">
+              alt="Wanna Be My Lover von Ayla Dade mit warmer Lichterkette auf weißem Hintergrund" width="1141"
+              height="1379" loading="lazy">
           </button>
           <figcaption>
             <span class="reading-book-label">02 / Summer Dreams</span>
@@ -584,13 +600,12 @@
         <div>
           <h3>Das Spiel</h3>
           <p>
-            My-Hits ist ein selbst entwickeltes, webbasiertes Partyspiel, das vom bekannten Musikspiel Hitster
-            inspiriert wurde. Die Spieler ordnen Musiktitel zeitlich ein und versuchen, ihre Karten an der richtigen
-            Stelle auf einer Zeitleiste zu platzieren.
+            Die Spieloberfläche umfasst eine interaktive Zeitleiste, auf der Karten platziert und
+            anschließend auf ihre richtige Reihenfolge überprüft werden können.
           </p>
           <p>
-            Das Spiel ist für mehrere Personen ausgelegt und kann gemeinsam über verschiedene Smartphones gespielt
-            werden. Die Spielmechanik und die Benutzeroberfläche habe ich mit HTML, CSS und JavaScript umgesetzt.
+            Bei der Entwicklung habe ich besonders auf die Bedienbarkeit auf Smartphones und das
+            gemeinsame Spielen mit mehreren Personen geachtet.
           </p>
         </div>
       </article>
@@ -607,12 +622,12 @@
   <button class="back-to-top" id="backToTop" type="button" aria-label="Nach oben scrollen">↑</button>
 
   <!-- Lightbox -->
-  <dialog class="lightbox" id="lightbox" aria-label="Fotogalerie – vergrößerte Ansicht">
+  <dialog class="lightbox" id="lightbox" aria-label="Fotogalerie – vergrößerte Ansicht" aria-modal="true">
     <div class="lightbox-content">
       <button class="lightbox-close" type="button" aria-label="Bildansicht schließen">×</button>
       <button class="lightbox-prev" type="button" aria-label="Vorheriges Bild">‹</button>
       <figure>
-        <img id="lightboxImage" src="images/portrait.jpg" alt="">
+        <img id="lightboxImage" src="images/portrait.jpg" alt="" width="1558" height="2048">
         <figcaption id="lightboxCaption"></figcaption>
       </figure>
       <button class="lightbox-next" type="button" aria-label="Nächstes Bild">›</button>
