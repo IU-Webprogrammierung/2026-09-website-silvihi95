@@ -123,16 +123,13 @@ body {
   line-height: 1.65;
   color: var(--color-text);
   background-color: #f6ebdf;
-  background-image:
-    linear-gradient(
-      180deg,
+  background-image: linear-gradient(180deg,
       rgba(249, 240, 225, 0.91) 0%,
       rgba(246, 222, 204, 0.85) 16%,
       rgba(235, 168, 148, 0.78) 38%,
       rgba(239, 184, 163, 0.8) 62%,
       rgba(247, 222, 204, 0.87) 82%,
-      rgba(250, 241, 227, 0.92) 100%
-    ),
+      rgba(250, 241, 227, 0.92) 100%),
     url("../images/hintergrund.jpg");
   background-size: 100% 100%, cover;
   background-position: center, center;
@@ -150,14 +147,11 @@ body {
       inset: 0;
       z-index: -1;
       pointer-events: none;
-      background-image:
-        linear-gradient(
-          180deg,
+      background-image: linear-gradient(180deg,
           rgba(249, 240, 232, 0.91) 0%,
           rgba(248, 229, 219, 0.88) 30%,
           rgba(244, 208, 198, 0.86) 65%,
-          rgba(250, 241, 232, 0.91) 100%
-        ),
+          rgba(250, 241, 232, 0.91) 100%),
         url("../images/hintergrund.jpg");
       background-size: cover;
       background-position: center center;
@@ -225,10 +219,10 @@ main {
     width: min(calc(100% - 2rem), var(--content-width));
   }
 
-  & > section {
+  &>section {
     padding-block: clamp(3rem, 6vw, 5rem);
 
-    & + section {
+    &+section {
       border-top: 1px solid var(--color-line);
     }
   }
@@ -259,8 +253,7 @@ section {
   top: 0;
   z-index: 100;
   background-color: var(--color-bg);
-  background-image:
-    linear-gradient(rgba(247, 243, 236, 0.78), rgba(247, 243, 236, 0.78)),
+  background-image: linear-gradient(rgba(247, 243, 236, 0.78), rgba(247, 243, 236, 0.78)),
     url("../images/hintergrund.jpg");
   background-size: cover;
   background-position: center;
@@ -899,7 +892,6 @@ section {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: clamp(4.5rem, 8vw, 8rem);
-  margin-top: 0;
 }
 
 .travel-editorial-item {
@@ -909,12 +901,18 @@ section {
   gap: clamp(2rem, 5vw, 5rem);
   min-width: 0;
 
+  & .travel-gallery-wrapper {
+    min-width: 0;
+    width: 100%;
+    align-self: center;
+  }
+
   &:nth-child(even) {
     & .travel-story {
       order: 2;
     }
 
-    & .travel-gallery {
+    & .travel-gallery-wrapper {
       order: 1;
     }
   }
@@ -922,7 +920,7 @@ section {
   & .travel-story {
     min-width: 0;
 
-    & > p:not(.travel-date) {
+    &>p:not(.travel-date) {
       font-size: clamp(0.94rem, 1.2vw, 1rem);
       line-height: 1.8;
       color: var(--color-text-muted);
@@ -969,6 +967,7 @@ section {
   }
 
   & .travel-gallery {
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-template-rows: auto auto;
     gap: 0.8rem;
@@ -978,9 +977,12 @@ section {
 
     & figure:first-child {
       grid-column: 1 / -1;
+      width: 100%;
 
       & img {
+        height: auto;
         aspect-ratio: 16 / 10;
+        object-fit: cover;
       }
     }
 
@@ -992,7 +994,6 @@ section {
       height: 100%;
       aspect-ratio: 4 / 3;
       border-radius: 0.125rem;
-      margin: 0;
     }
 
     & figcaption {
@@ -1003,13 +1004,19 @@ section {
     }
   }
 
-  @media (max-width: 56.25rem) {
-    grid-template-columns: 1fr;
+  @media (max-width: 68.75rem) {
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.75rem;
 
+    & .travel-story,
+    & .travel-gallery-wrapper {
+      min-width: 0;
+    }
+
     &:nth-child(even) {
+
       & .travel-story,
-      & .travel-gallery {
+      & .travel-gallery-wrapper {
         order: initial;
       }
     }
@@ -1130,6 +1137,7 @@ section {
     gap: 1.25rem;
 
     &.reading-book-summer {
+
       & .reading-book-cover,
       & figcaption {
         order: initial;
@@ -1144,7 +1152,7 @@ section {
 #privatprojekt {
   padding-block: clamp(4.5rem, 8vw, 8rem);
 
-  & > h2 {
+  &>h2 {
     font-family: "Playfair Display", Georgia, serif;
     font-size: clamp(2.5rem, 5.5vw, 5rem);
     font-weight: 400;
@@ -1153,7 +1161,7 @@ section {
     margin-bottom: 1.6rem;
   }
 
-  & > p {
+  &>p {
     max-width: 69ch;
     color: var(--color-text-muted);
     font-size: clamp(0.96rem, 1.3vw, 1.06rem);
@@ -1172,7 +1180,7 @@ section {
     gap: clamp(2rem, 5vw, 6rem);
     min-width: 0;
 
-    & > * {
+    &>* {
       min-width: 0;
     }
 
@@ -1231,19 +1239,19 @@ section {
 #privatprojekt .project-card {
   grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
 
-  & > .project-gallery {
+  &>.project-gallery {
     order: 2;
   }
 
-  & > div:last-child {
+  &>div:last-child {
     order: 1;
   }
 
   @media (max-width: 50rem) {
     grid-template-columns: minmax(0, 1fr);
 
-    & > .project-gallery,
-    & > div:last-child {
+    &>.project-gallery,
+    &>div:last-child {
       order: initial;
     }
   }
@@ -1428,6 +1436,7 @@ section {
 }
 
 /* Weitere Fotografien */
+
 .gallery-more-button {
   display: block;
   margin: 1.5rem auto 0;

@@ -7,7 +7,6 @@ const navToggle = document.getElementById("navToggle");
 const mainNav = document.getElementById("mainNav");
 
 if (navToggle && mainNav) {
-
     // Hamburger-Menü öffnen und schließen
     navToggle.addEventListener("click", () => {
         const isOpen = mainNav.classList.toggle("is-open");
@@ -30,13 +29,11 @@ if (navToggle && mainNav) {
     });
 }
 
-
 /* 2. Back-to-Top Button */
 
 const backToTopBtn = document.getElementById("backToTop");
 
 if (backToTopBtn) {
-
     // Button beim Scrollen ein- und ausblenden
     function updateBackToTop() {
         backToTopBtn.classList.toggle(
@@ -65,7 +62,6 @@ if (backToTopBtn) {
     });
 }
 
-
 /* 3. Lightbox für Galerien */
 
 const lightbox = document.getElementById("lightbox");
@@ -92,7 +88,6 @@ if (
     prevButton &&
     nextButton
 ) {
-
     // Bild und Beschriftung aktualisieren
     function showImage(index) {
         if (activeGallery.length === 0) return;
@@ -105,10 +100,8 @@ if (
         const figure = button.closest("figure");
         const caption = figure.querySelector("figcaption");
 
-
         lightboxImage.src = image.dataset.src || image.src;
         lightboxImage.alt = image.alt;
-
 
         lightboxCaption.textContent =
             caption ? caption.textContent : "";
@@ -151,10 +144,8 @@ if (
         lastFocusedElement = null;
     });
 
-
     // Alle Galerien unabhängig voneinander einrichten
     document.querySelectorAll(".gallery").forEach((gallery) => {
-
         const buttons = [
             ...gallery.querySelectorAll(".gallery-button")
         ];
@@ -170,7 +161,6 @@ if (
 
         if (moreButton?.classList.contains("gallery-more-button")) {
             moreButton.addEventListener("click", () => {
-
                 const firstExtraIndex = buttons.findIndex((button) =>
                     button.closest("figure")?.hidden
                 );
@@ -178,12 +168,9 @@ if (
                 if (firstExtraIndex !== -1) {
                     openLightbox(gallery, firstExtraIndex);
                 }
-
             });
         }
-
     });
-
 
     // Schließen-Button
     closeButton.addEventListener("click", closeLightbox);
@@ -200,7 +187,6 @@ if (
 
     // Tastatursteuerung
     lightbox.addEventListener("keydown", (event) => {
-
         if (event.key === "ArrowLeft") {
             event.preventDefault();
             showImage(currentImageIndex - 1);
@@ -210,7 +196,6 @@ if (
             event.preventDefault();
             showImage(currentImageIndex + 1);
         }
-
     });
 
     // Klick außerhalb des Bildbereichs
@@ -226,24 +211,19 @@ if (
     }, { passive: true });
 
     lightbox.addEventListener("touchend", (event) => {
-
         if (touchStartX === null) return;
 
         const touchEndX = event.changedTouches[0].screenX;
         const difference = touchEndX - touchStartX;
 
         if (Math.abs(difference) > 50) {
-
             if (difference > 0) {
                 showImage(currentImageIndex - 1);
             } else {
                 showImage(currentImageIndex + 1);
             }
-
         }
 
         touchStartX = null;
-
     }, { passive: true });
-
 }
