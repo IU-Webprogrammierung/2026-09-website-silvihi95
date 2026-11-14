@@ -200,10 +200,11 @@ Da die Website viele Fotografien enthält, wurde auch auf die Ladegeschwindigkei
 
 ### Versionsverwaltung mit Git und GitHub
 
-- Änderungen wurden zunächst lokal gesammelt und überprüft
-- Entwicklungsschritte wurden mit aussagekräftigen Commit-Nachrichten dokumentiert
-- GitHub wurde zur Verwaltung des Projekt-Repositories verwendet
-- Die Versionsverwaltung ermöglicht es, Änderungen und Überarbeitungen nachzuvollziehen
+- Versionsverwaltung mit Git und GitHub während der gesamten Entwicklung
+- Änderungen wurden zunächst lokal gesammelt, überprüft und anschließend committed
+- Über 70 Commits zur nachvollziehbaren Dokumentation der Entwicklungsschritte
+- Aussagekräftige Commit-Nachrichten nach dem Conventional-Commits-Schema, beispielsweise feat:, fix: und docs:
+- Entwicklung und finale Bereitstellung des Projekts über den main-Branch
 
 ### Erkenntnisse
 
