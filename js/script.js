@@ -2,38 +2,39 @@
 "use strict";
 
 /* =========================================
-   1. Mobile Navigation
+   1. Mobile navigation
+
 ========================================= */
 
-const navToggle = document.getElementById("navToggle");
-const mainNav = document.getElementById("mainNav");
+const navigationToggle = document.getElementById("navigationToggle");
+const mainnavigation = document.getElementById("mainnavigation");
 
-if (navToggle && mainNav) {
-    function closeMobileNav() {
-        mainNav.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
-        navToggle.setAttribute("aria-label", "Menü öffnen");
+if (navigationToggle && mainnavigation) {
+    function closeMobilenavigation() {
+        mainnavigation.classList.remove("is-open");
+        navigationToggle.setAttribute("aria-expanded", "false");
+        navigationToggle.setAttribute("aria-label", "Menü öffnen");
     }
 
-    navToggle.addEventListener("click", () => {
-        const isOpen = mainNav.classList.toggle("is-open");
+    navigationToggle.addEventListener("click", () => {
+        const isOpen = mainnavigation.classList.toggle("is-open");
 
-        navToggle.setAttribute("aria-expanded", String(isOpen));
-        navToggle.setAttribute(
+        navigationToggle.setAttribute("aria-expanded", String(isOpen));
+        navigationToggle.setAttribute(
             "aria-label",
             isOpen ? "Menü schließen" : "Menü öffnen"
         );
     });
 
-    mainNav.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", closeMobileNav);
+    mainnavigation.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMobilenavigation);
     });
 
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape" &&
-            mainNav.classList.contains("is-open")) {
-            closeMobileNav();
-            navToggle.focus();
+            mainnavigation.classList.contains("is-open")) {
+            closeMobilenavigation();
+            navigationToggle.focus();
         }
     });
 
@@ -41,7 +42,7 @@ if (navToggle && mainNav) {
 
     function handleDesktopChange(event) {
         if (event.matches) {
-            closeMobileNav();
+            closeMobilenavigation();
         }
     }
 
@@ -264,7 +265,7 @@ if (
     });
 
 
-    /* Navigation innerhalb der Lightbox */
+    /* navigation innerhalb der Lightbox */
 
     closeButton.addEventListener("click", closeLightbox);
 
