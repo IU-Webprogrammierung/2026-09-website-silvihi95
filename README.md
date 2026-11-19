@@ -6,215 +6,174 @@ Silvia Hienz
 
 ## Über das Projekt
 
-Für das Modul „Projekt: Web-Programmierung“ wurde eine persönliche Portfolio-Website entwickelt. Sie verbindet die Themen Fotografie, Reisen, Bücher und eigene Webprojekte.
+Für das Modul „Projekt: Web-Programmierung“ wurde eine Portfolio-Website mit sieben Bereichen erstellt. Sie zeigt Fotografien, Reisen, Buchempfehlungen und Webprojekte. Die Inhalte befinden sich auf einer Seite. Impressum und Datenschutz haben jeweils eine eigene Unterseite.
 
-Die Website ist als responsiver One-Pager aufgebaut und umfasst sieben Inhaltsbereiche. Über die Navigation können diese direkt aufgerufen werden. Ergänzend gibt es separate Seiten für das Impressum und den Datenschutz.
-
-Bei der Gestaltung lag der Schwerpunkt darauf, die Fotografien ansprechend zu präsentieren und die verschiedenen Inhalte übersichtlich darzustellen. Gleichzeitig sollte die Website auf Smartphones, Tablets und Desktop-Geräten gut funktionieren.
+Bei der Gestaltung standen die Fotografien und eine übersichtliche Bedienung auf Smartphone, Tablet und Desktop im Vordergrund.
 
 ## Aufbau der Website
 
-Die Website besteht aus folgenden Bereichen:
-
-- **Über mich:** Persönliche Vorstellung und Einblick in die eigenen Interessen
-- **Fotografie:** Galerie mit ausgewählten Landschaftsaufnahmen
-- **Nebengewerbe:** Vorstellung von Silvis Photography und Einblicke in verschiedene Shootings
-- **Reisen:** Reiseberichte und Fotografien aus Lappland (Rovaniemi), Island und Südtirol
-- **Buchempfehlungen:** Vorstellung zweier Bücher von Ayla Dade
+- **Über mich:** Persönliche Vorstellung und Interessen
+- **Fotografie:** Ausgewählte Landschaftsaufnahmen
+- **Nebengewerbe:** Silvis Photography und Einblicke in verschiedene Shootings
+- **Reisen:** Berichte und Fotografien aus Lappland (Rovaniemi), Island und Südtirol
+- **Buchempfehlungen:** Zwei Bücher von Ayla Dade
 - **Uni-Projekt:** Vorstellung der Sichelhenket-Website
 - **Privat-Projekt:** Vorstellung des Musikspiels My-Hits
 
 ## Verwendete Technologien
 
-Die Website wurde mit HTML5, CSS3 und JavaScript umgesetzt. Externe CSS- oder JavaScript-Frameworks wurden nicht verwendet.
+Die Website verwendet HTML5, CSS3 und JavaScript. Externe Frameworks kommen nicht zum Einsatz.
 
 ### HTML
 
-- Verwendung semantischer Elemente wie `header`, `nav`, `main`, `section`, `article` und `footer`
-- Strukturierung der Bilder mit `figure` und `figcaption`
-- Alternativtexte zur Beschreibung der Bilder
-- Interne Sprunglinks zur Navigation innerhalb der Website
-- Externe Verlinkungen zu weiterführenden Websites
-- HTML-Element `<dialog>` für die vergrößerte Bildansicht
-- Attribute wie `loading`, `width` und `height` zur Unterstützung des Bildladens
-- Separate HTML-Seiten für Impressum und Datenschutz
+- Semantische Elemente wie `header`, `navigation`, `main`, `section`, `article` und `footer`
+- `figure` und `figcaption` für Bilder und Bildunterschriften
+- Alternativtexte für Bilder
+- Interne Sprunglinks und externe Verlinkungen
+- `<dialog>` für die vergrößerte Bildansicht
+- `loading`, `width` und `height` zur Unterstützung des Bildladens
+- Separate Seiten für Impressum und Datenschutz
 
 ### CSS
 
-- **Flexbox:** Anordnung von Navigation, Texten und weiteren Seitenelementen
-- **CSS Grid:** Gestaltung der Bildergalerien und mehrspaltigen Bereiche
-- **Media Queries:** Anpassung der Darstellung an unterschiedliche Bildschirmgrößen
-- **CSS-Variablen:** Zentrale Verwaltung von Farben und grundlegenden Einstellungen
-- **`clamp()`:** Flexible Schriftgrößen und Abstände
-- **CSS-Nesting:** Übersichtliche Strukturierung zusammengehöriger CSS-Regeln
-- **Relative Einheiten:** Überwiegende Verwendung von `rem` statt festen Pixelwerten
-- **Animationen und Effekte:** Hover-Effekte, Übergänge und kleinere Animationen
-- **Schriftarten:** Lokale Einbindung der verwendeten Schriftarten
-- **Hintergrundgestaltung:** Kombination aus Hintergrundbild und Farbverläufen
+- **Flexbox:** Navigation, Text-Bild-Anordnungen und weitere Seitenelemente
+- **Grid:** Bildergalerien und mehrspaltige Bereiche
+- **Media Queries:** Anpassungen für verschiedene Bildschirmbreiten
+- **CSS-Variablen:** Farben und wiederkehrende Einstellungen
+- **Clamp:** Flexible Schriftgrößen und Abstände
+- **CSS-Nesting:** Gruppierung zusammengehöriger Regeln
+- **Relative Einheiten:** Überwiegend `rem` statt fester Pixelwerte
+- **Effekte:** Hover-Zustände, Übergänge und kleinere Animationen
+- **Schriftarten:** Lokale Einbindung
+- **Hintergrund:** Kombination aus Bild und Farbverläufen
 
 ### JavaScript
 
-- Mobile Navigation mit Hamburger-Menü
-- Lightbox zur vergrößerten Darstellung der Fotografien
-- Navigation innerhalb der Lightbox über Pfeiltasten, Schaltflächen und Wischgesten
+- Hamburger-Menü für die mobile Navigation
+- Lightbox mit Pfeilschaltflächen, Tastatursteuerung und Wischgesten
 - Ein- und Ausblenden zusätzlicher Galeriebilder
-- Nachladen zusätzlicher Bilder beim erstmaligen Öffnen einer Galerie
-- Back-to-top-Button zum Zurückkehren an den Seitenanfang
-- Unterstützung der Tastaturbedienung bei interaktiven Elementen
+- Bedarfsgerechtes Nachladen ausgeblendeter Bilder
+- Back-to-top-Button
+- Tastaturbedienung interaktiver Elemente
 
-### Weitere Werkzeuge
+### Werkzeuge
 
-- **Visual Studio Code:** Entwicklung und Bearbeitung der Projektdateien
-- **Git:** Lokale Versionsverwaltung
-- **GitHub:** Verwaltung des Projekt-Repositories
-- **Chrome-Entwicklertools:** Überprüfung der Darstellung auf verschiedenen Bildschirmgrößen
-- **Google Lighthouse:** Analyse von Performance, Barrierefreiheit und weiteren Qualitätsmerkmalen
+- **Visual Studio Code:** Bearbeitung der Projektdateien
+- **Git und GitHub:** Versionsverwaltung
+- **Chrome-Entwicklertools:** Prüfung verschiedener Bildschirmbreiten
+- **Google Lighthouse:** Prüfung von Performance, Barrierefreiheit und weiteren Qualitätsmerkmalen
 
 ## Responsive Design
 
-Die Website wurde so umgesetzt, dass sich die Darstellung an unterschiedliche Bildschirmgrößen anpasst.
+Auf dem Desktop stehen Texte und Bilder teilweise nebeneinander. Auf Tablets ändern sich die Raster und Abstände. Auf Smartphones sind die meisten Bereiche einspaltig. Unterhalb von 1100 px wird die Hauptnavigation durch ein Hamburger-Menü ersetzt.
 
-- **Desktop:** Mehrspaltige Layouts mit nebeneinander angeordneten Texten und Bildern
-- **Tablet:** Anpassung von Bildrastern, Abständen und Inhaltsbereichen an die verfügbare Breite
-- **Smartphone:** Überwiegend einspaltige Darstellung für eine bessere Lesbarkeit
-- **Navigation:** Unterhalb von 1100 px wird die Hauptnavigation durch ein Hamburger-Menü ersetzt
-- **Bildergalerien:** Anpassung der Spaltenanzahl und Bildanordnung
-- **Typografie:** Flexible Schriftgrößen und Abstände mithilfe von `clamp()` und relativen Maßeinheiten
+Für die Anpassungen werden mehrere Media Queries eingesetzt, unter anderem bei 480, 600, 640, 680, 760, 768, 780, 800, 850, 900 und 1100 px. Die einzelnen Breakpoints wurden dort gesetzt, wo das jeweilige Layout nicht mehr gut funktionierte.
 
-Für die Anpassungen werden mehrere Media Queries verwendet, unter anderem bei:
-
-- 480 px, 600 px, 640 px und 680 px
-- 760 px, 768 px, 780 px und 800 px
-- 850 px, 900 px und 1100 px
-
-Die Breakpoints orientieren sich daran, wann einzelne Inhalte oder Komponenten eine andere Anordnung benötigen.
-
-Für die Überprüfung wurden insbesondere folgende Bildschirmbreiten verwendet:
-
-- **390 px:** Smartphone
-- **820 px:** Tablet
-- **1440 px:** Desktop
+Die Darstellung wurde insbesondere bei 390 px (Smartphone), 820 px (Tablet) und 1440 px (Desktop) überprüft. Für die Abgabedokumentation wurden außerdem Ansichten mit 360 × 800 px, 820 × 1180 px und 1920 × 1080 px festgehalten.
 
 ## Bildergalerien und Lightbox
 
-Die Fotografien bilden einen wichtigen Bestandteil der Website. Für ihre Darstellung wurden unterschiedliche Galerielayouts umgesetzt.
-
-### Bildergalerien
+### Galerien
 
 - **Landschaftsfotografie:** Asymmetrisches Magazin-Layout mit unterschiedlich großen Bildern
-- **Silvis Photography:** Galerie mit Einblicken in die fotografische Arbeit
-- **Reisen:** Eigene Bildergalerien für Lappland, Island und Südtirol
-- **Responsive Darstellung:** Anpassung der Bildanordnungen an die jeweilige Bildschirmgröße
+- **Silvis Photography:** Einblicke in die fotografische Arbeit
+- **Reisen:** Galerien für Lappland, Island und Südtirol
+- **Responsive Darstellung:** Angepasste Raster für kleinere Bildschirme
 
 ### Lightbox
 
-Beim Anklicken eines Galeriebildes öffnet sich eine vergrößerte Ansicht.
+Beim Anklicken eines Bildes öffnet sich eine vergrößerte Ansicht über das HTML-Element `<dialog>`. Die Navigation ist über Pfeilschaltflächen, Pfeiltasten und Wischgesten möglich. Angezeigt werden außerdem die Bildunterschrift und die Position innerhalb der Galerie.
 
-- Umsetzung mit JavaScript und dem HTML-Element `<dialog>`
-- Wechsel zwischen Bildern über Pfeilschaltflächen
-- Navigation über die Pfeiltasten der Tastatur
-- Wischgesten auf Touchgeräten
-- Anzeige der Bildunterschrift
-- Anzeige der aktuellen Bildnummer innerhalb der Galerie
-- Schließen über die Schließen-Schaltfläche, die Escape-Taste oder den Dialoghintergrund
-- Wiederherstellung des Tastaturfokus nach dem Schließen
-
-Die Navigation innerhalb der Lightbox berücksichtigt die aktuell sichtbaren Bilder der jeweiligen Galerie.
+Die Lightbox lässt sich über die Schließen-Schaltfläche, die Escape-Taste oder den Dialoghintergrund schließen. Danach wird der Tastaturfokus wiederhergestellt. Bei der Navigation werden die aktuell sichtbaren Bilder der jeweiligen Galerie berücksichtigt.
 
 ### Erweiterbare Galerien
 
-In der Landschaftsgalerie und den Reisegalerien wurde eine zusätzliche Funktion umgesetzt.
+Die Landschafts- und Reisegalerien wurden später um „Mehr anzeigen“ und „Weniger anzeigen“ ergänzt. Zusätzliche Bilder erscheinen in ergänzenden Rastern, während die ursprüngliche Anordnung erhalten bleibt. Die zunächst ausgeblendeten Bilddateien werden über `data-src` erst beim ersten Aufklappen geladen.
 
-- **„Mehr anzeigen“:** Blendet weitere Fotografien ein
-- **„Weniger anzeigen“:** Reduziert die Galerie auf ihre ursprüngliche Ansicht
-- **Nachladen:** Zusätzliche Bilder werden erst beim erstmaligen Aufklappen geladen
-- **Layout:** Die ursprüngliche Bildanordnung bleibt erhalten; weitere Bilder werden in ergänzenden Rastern dargestellt
-
-Dadurch können mehr Fotografien gezeigt werden, ohne dass die Seite beim ersten Aufruf mit zu vielen Bildern überladen wird.
+Die bestehende Lightbox wurde dafür angepasst, damit auch die neu eingeblendeten Bilder in der Bildnavigation berücksichtigt werden. Die bereits zuvor umgesetzte Tastatursteuerung und die Wischgesten blieben erhalten.
 
 ## Weitere JavaScript-Funktionen
 
 ### Mobile Navigation
 
-- Öffnen und Schließen des Hamburger-Menüs über eine Schaltfläche
-- Automatisches Schließen nach Auswahl eines Navigationslinks
-- Schließen über die Escape-Taste
-- Wiederherstellung des Tastaturfokus auf die Menüschaltfläche
-- Kennzeichnung des Menüzustands über `aria-expanded`
+### Mobile Navigation
+
+Bei kleineren Bildschirmbreiten wird die Hauptnavigation durch ein Hamburger-Menü ersetzt. Dieses lässt sich über eine Schaltfläche öffnen und schließen. Nach der Auswahl eines Navigationslinks schließt sich das Menü automatisch.
+
+Für die Tastaturbedienung kann das Menü zusätzlich mit der Escape-Taste geschlossen werden. Dabei wird der Fokus wieder auf die Menüschaltfläche gesetzt. Das Attribut `aria-expanded` gibt den aktuellen Zustand des Menüs für unterstützende Technologien an.
 
 ### Back-to-top-Button
 
-- Erscheint nach dem Herunterscrollen
-- Ermöglicht die Rückkehr zum Seitenanfang
-- Verwendet normalerweise eine weiche Scrollanimation
-- Berücksichtigt die Systemeinstellung `prefers-reduced-motion`
+Der Button erscheint nach dem Herunterscrollen und führt zum Seitenanfang zurück. Normalerweise erfolgt dies mit einer weichen Scrollanimation. Die Systemeinstellung `prefers-reduced-motion` wird berücksichtigt.
 
 ## Barrierefreiheit
 
-Bei der Umsetzung wurde auf eine möglichst gute Bedienbarkeit geachtet.
+Bei der Umsetzung wurden folgende Maßnahmen berücksichtigt:
 
-- Semantische HTML-Struktur und sinnvolle Überschriftenhierarchie
-- Skip-Link zum direkten Aufrufen des Hauptinhalts
+- Semantische HTML-Struktur und Überschriftenhierarchie
+- Skip-Link zum Hauptinhalt
 - Alternativtexte für Bilder
-- Sichtbare Fokusmarkierungen bei der Tastaturbedienung
+- Sichtbare Fokusmarkierungen
 - ARIA-Attribute für Navigation und interaktive Elemente
-- Tastaturbedienbare Bildergalerien
-- Wiederherstellung des Tastaturfokus nach dem Schließen der Lightbox
+- Tastaturbedienbare Galerien und Dialoge
+- Wiederherstellung des Fokus nach dem Schließen der Lightbox
 - Berücksichtigung reduzierter Animationen
-- Verwendung relativer Maßeinheiten zur Unterstützung unterschiedlicher Darstellungsgrößen
-
-Diese Maßnahmen sollen die Bedienung der Website auch ohne Maus erleichtern.
+- Relative Maßeinheiten für anpassungsfähige Darstellungen
 
 ## Bildoptimierung und Performance
 
-Da die Website viele Fotografien enthält, wurde auch auf die Ladegeschwindigkeit geachtet.
+Da die Website viele Fotos enthält, wurden die Bilddateien verkleinert und komprimiert. Viele Bilder verwenden `loading="lazy"`. Zusätzliche Galeriebilder werden erst bei Bedarf über `data-src` geladen. Angegebene Bildabmessungen (`width` und `height`) helfen dabei, Layoutverschiebungen zu begrenzen.
 
-- **Bildoptimierung:** Verkleinerung und Optimierung der Bilddateien, um die Datenmenge zu reduzieren
-- **Lazy Loading:** Verwendung von `loading="lazy"` für viele Bilder
-- **Zusätzliche Galeriebilder:** Verwendung von `data-src`, damit zunächst ausgeblendete Bilder erst bei Bedarf geladen werden
-- **Bildabmessungen:** Angabe von `width` und `height`, um Platzverschiebungen während des Ladens zu verringern
-- **Lighthouse:** Überprüfung der Performance und Ermittlung möglicher Verbesserungen
+Google Lighthouse wurde unter anderem zur Prüfung der Ladegeschwindigkeit und Barrierefreiheit eingesetzt.
 
-## Entwicklung und Erkenntnisse
+## Entwicklung und Überarbeitung
 
-### Entwicklung
+### Vorgehen
 
-- **Grundstruktur:** Aufbau des One-Pagers mit HTML und Aufteilung in sieben Inhaltsbereiche
-- **Gestaltung:** Umsetzung der verschiedenen Layouts mit CSS Grid und Flexbox
-- **Responsive Design:** Anpassung der Inhalte für Smartphones, Tablets und Desktop-Geräte
-- **Bildergalerien:** Entwicklung unterschiedlicher Bildanordnungen und Überarbeitung der Darstellung für kleinere Bildschirme
-- **JavaScript:** Umsetzung der mobilen Navigation, der Lightbox und des Back-to-top-Buttons
-- **Finalisierung:** Erweiterung der Landschafts- und Reisegalerien um die Funktionen „Mehr anzeigen“ und „Weniger anzeigen“
-- **Codeüberarbeitung:** Entfernung nicht mehr benötigter CSS-Regeln sowie Einsatz von CSS-Nesting und relativen Maßeinheiten
-- **Versionsverwaltung:** Dokumentation der Entwicklung mit Git und GitHub
+Zuerst entstanden die HTML-Struktur und die sieben Inhaltsbereiche. Anschließend wurden die Layouts mit Flexbox und Grid umgesetzt und für kleinere Bildschirme angepasst. Danach folgten die mobile Navigation, die Lightbox und der Back-to-top-Button. Zuletzt erhielten die Landschafts- und Reisegalerien die Funktionen „Mehr anzeigen“ und „Weniger anzeigen“.
 
-### Tests und Überprüfung
+### Überarbeitungen
 
-- **Chrome-Entwicklertools:** Überprüfung des responsiven Designs bei verschiedenen Bildschirmbreiten, insbesondere 390 px, 820 px und 1440 px
-- **Google Lighthouse:** Untersuchung der Performance, Barrierefreiheit und weiterer Qualitätsmerkmale
-- **Mobile Navigation:** Test des Öffnens und Schließens sowie der Bedienung über die Escape-Taste
-- **Lightbox:** Überprüfung der Bildnavigation, der Schließen-Funktionen und der Tastaturbedienung
-- **Erweiterbare Galerien:** Test der Schaltflächen „Mehr anzeigen“ und „Weniger anzeigen“
-- **Back-to-top-Button:** Überprüfung der Funktion beim Zurückkehren an den Seitenanfang
-- **Bildoptimierung:** Anpassung der Bilddateien und des Ladeverhaltens
+Die Darstellung der Bildergalerien musste für kleinere Bildschirme mehrfach angepasst werden. Auch die CSS-Datei wurde überarbeitet: Nicht mehr benötigte Regeln wurden entfernt, zusammengehörige Selektoren mit CSS-Nesting gruppiert und feste Pixelwerte teilweise durch relative Maßeinheiten ersetzt. So wurde die CSS-Datei übersichtlicher und ließ sich leichter anpassen.
 
-### Versionsverwaltung mit Git und GitHub
+Bei der Galerieerweiterung sollte das vorhandene Magazin-Layout erhalten bleiben. Die zusätzlichen Bilder liegen deshalb in eigenen Rastern. Außerdem wurden das Nachladen ergänzt und die Lightbox so angepasst, dass sie auch die neu eingeblendeten Bilder anzeigt. Die Tastatursteuerung war zu diesem Zeitpunkt bereits fertig.
 
-- Versionsverwaltung mit Git und GitHub während der gesamten Entwicklung
-- Änderungen wurden zunächst lokal gesammelt, überprüft und anschließend committed
-- Über 70 Commits zur nachvollziehbaren Dokumentation der Entwicklungsschritte
-- Aussagekräftige Commit-Nachrichten nach dem Conventional-Commits-Schema, beispielsweise feat:, fix: und docs:
-- Entwicklung und finale Bereitstellung des Projekts über den main-Branch
+Die Änderungen wurden schrittweise geprüft und mit Git dokumentiert.
+
+### Abweichungen vom ursprünglichen Konzept
+
+Die sieben Inhaltsbereiche aus dem Konzept wurden beibehalten. Einzelne Gestaltungselemente änderten sich während der Umsetzung. Statt des ursprünglich geplanten gleichmäßigen Vier-Spalten-Rasters erhielt die Fotografie-Galerie ein asymmetrisches Magazin-Layout. Der Bereich „Nebengewerbe“ wurde gegenüber dem ursprünglichen Konzept umfangreicher gestaltet und enthält neben der Vorstellung von Silvis Photography auch eine Bildergalerie.
+
+Im Konzept war zunächst ein Breakpoint bei 768 px vorgesehen. Ein Breakpoint allein reichte in der Praxis nicht aus. Manche Bereiche mussten schon bei größeren Bildschirmbreiten umgestellt werden. Die Hauptnavigation wechselt beispielsweise unterhalb von 1100 px zum Hamburger-Menü.
+
+Auch das geplante Bergsee-Panorama wurde ersetzt. Es war zu hell und passte optisch nicht zum restlichen Design. Das neue Hintergrundbild wurde mit Farbverläufen kombiniert.
+
+Die Lightbox und die erweiterbaren Galerien kamen während der Entwicklung hinzu. Am Aufbau der Seite mit sieben Bereichen hat sich dadurch nichts geändert.
+
+### Tests
+
+- **Responsive Darstellung:** Prüfung verschiedener Bildschirmbreiten in den Chrome-Entwicklertools
+- **Lighthouse:** Analyse von Performance und Barrierefreiheit
+- **Tastaturbedienung:** Prüfung der Navigation und interaktiven Elemente mit Tab, Enter und Escape. Dabei wurden die Erreichbarkeit der Bedienelemente, das Auslösen von Funktionen und das Schließen geöffneter Dialoge getestet.
+- **VoiceOver:** Prüfung der Navigation, Bildbeschreibungen und interaktiven Elemente mit Apple VoiceOver in Google Chrome
+- **Browserkonsole:** Kontrolle der veröffentlichten Website in Chrome,bei der abschließenden Prüfung wurden keine Fehlermeldungen angezeigt
+- **Mobile Navigation:** Öffnen, Schließen, Linkauswahl und Escape-Taste
+- **Lightbox:** Bildwechsel, Schließen, Tastatursteuerung und Wischgesten
+- **Erweiterbare Galerien:** „Mehr anzeigen“, „Weniger anzeigen“ und Ladeverhalten
+- **Back-to-top-Button:** Rückkehr zum Seitenanfang
+- **Bilder:** Dateigrößen und Ladeverhalten
+
+### Versionsverwaltung
+
+Die Änderungen wurden mit Git dokumentiert und das Repository auf GitHub verwaltet. Kleinere Änderungen wurden zunächst lokal gesammelt und geprüft, bevor sie als Commits festgehalten wurden. Insgesamt sind über 70 Commits entstanden. Die Commit-Nachrichten orientieren sich am Conventional-Commits-Schema, beispielsweise `feat:`, `fix:` und `docs:`. Der finale Projektstand wird über den Branch `main` bereitgestellt.
 
 ### Erkenntnisse
 
-- **Responsive Design:** Unterschiedliche Bildschirmgrößen erfordern teilweise eigene Layoutanpassungen. Besonders bei den Bildergalerien waren mehrere Überarbeitungen notwendig.
-- **CSS Grid und Flexbox:** Die Kombination beider Techniken ermöglicht unterschiedliche Layouts und erleichtert die Anpassung an verschiedene Bildschirmbreiten.
-- **Performance:** Große Bilddateien können die Ladegeschwindigkeit deutlich beeinflussen. Die Analyse mit Google Lighthouse half dabei, Verbesserungsmöglichkeiten zu erkennen.
-- **JavaScript:** Durch die Umsetzung interaktiver Funktionen konnten die Kenntnisse im Umgang mit DOM-Elementen und Ereignissen vertieft werden.
-- **Codequalität:** Eine übersichtliche CSS-Struktur erleichtert spätere Anpassungen und die Wartung der Website.
-- **Barrierefreiheit:** Tastaturbedienung, Alternativtexte und sichtbare Fokusmarkierungen sind wichtige Bestandteile einer gut bedienbaren Website.
-- **Versionsverwaltung:** Git erleichtert die Dokumentation der Entwicklung und macht Änderungen nachvollziehbar.
+Besonders zeitaufwendig waren die Bildergalerien. Das asymmetrische Layout sah auf großen Bildschirmen gut aus, musste für kleinere Ansichten aber mehrfach angepasst werden. Dabei zeigte sich, wie sich Flexbox und Grid für unterschiedliche Bildschirmgrößen einsetzen lassen.
+
+Ein weiterer Punkt war die Ladezeit. Mit Lighthouse ließ sich prüfen, wie sich große Fotodateien auf die Performance auswirken. Bei der Lightbox und der mobilen Navigation waren außerdem die Tastaturbedienung und die Rückgabe des Fokus zu berücksichtigen.
+
+Die Bereinigung der CSS-Datei hat spätere Änderungen erleichtert. Git machte die einzelnen Arbeitsschritte nachvollziehbar.
 
 ## Projektstruktur
 
@@ -233,17 +192,15 @@ Webauftritt_Silvi/
 └── index.html
 ```
 
-- **css:** Stylesheet für die Gestaltung und das responsive Design
+- **css:** Stylesheet und responsive Design
 - **fonts:** Lokal eingebundene Schriftarten
 - **images:** Fotografien und weitere Bilddateien
-- **js:** JavaScript für Navigation, Lightbox und weitere interaktive Funktionen
-- **.gitignore:** Festlegung von Dateien, die von Git nicht berücksichtigt werden sollen
-- **README.md:** Dokumentation des Projekts
-- **index.html:** Hauptseite des Portfolios
+- **js:** JavaScript-Funktionen
+- **.gitignore:** Von Git ausgeschlossene Dateien
+- **README.md:** Projektdokumentation
+- **index.html:** Portfolio-Startseite
 - **impressum.html und datenschutz.html:** Rechtliche Informationen
 
 ## Website öffnen
 
-Die Website kann lokal über die Datei `index.html` in einem Browser geöffnet werden.
-
-Für die grundlegende Darstellung und die JavaScript-Funktionen ist keine Installation zusätzlicher Frameworks erforderlich.
+Die Website lässt sich lokal über `index.html` in einem Browser öffnen. Zusätzliche Frameworks oder Installationsschritte sind nicht erforderlich.
