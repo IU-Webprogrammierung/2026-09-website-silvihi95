@@ -165,7 +165,7 @@ Die Lightbox und die erweiterbaren Galerien kamen während der Entwicklung hinzu
 
 ### Versionsverwaltung
 
-Die Änderungen wurden mit Git dokumentiert und das Repository auf GitHub verwaltet. Kleinere Änderungen wurden zunächst lokal gesammelt und geprüft, bevor sie als Commits festgehalten wurden. Insgesamt sind über 70 Commits entstanden. Die Commit-Nachrichten orientieren sich am Conventional-Commits-Schema, beispielsweise `feat:`, `fix:` und `docs:`. Der finale Projektstand wird über den Branch `main` bereitgestellt.
+Die Änderungen wurden mit Git dokumentiert und das Repository auf GitHub verwaltet. Kleinere Änderungen wurden zunächst lokal gesammelt und geprüft, bevor sie als Commits festgehalten wurden. Insgesamt sind über 80 Commits entstanden. Die Commit-Nachrichten orientieren sich am Conventional-Commits-Schema, beispielsweise `feat:`, `fix:` und `docs:`. Der finale Projektstand wird über den Branch `main` bereitgestellt.
 
 ### Erkenntnisse
 
