@@ -178,7 +178,7 @@ Die Bereinigung der CSS-Datei hat spätere Änderungen erleichtert. Git machte d
 ## Projektstruktur
 
 ```text
-Webauftritt_Silvi/
+Silvis Portfolio/
 ├── css/
 │   └── style.css
 ├── fonts/
