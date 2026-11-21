@@ -54,7 +54,7 @@ Die Website verwendet HTML5, CSS3 und JavaScript. Externe Frameworks kommen nich
 
 
 
-\- Semantische Elemente wie \`header\`, \`navigation\`, \`main\`, \`section\`, \`article\` und \`footer\`
+\- Semantische Elemente wie \`header\`, \`nav\`, \`main\`, \`section\`, \`article\` und \`footer\`
 
 \- \`figure\` und \`figcaption\` für Bilder und Bildunterschriften
 
