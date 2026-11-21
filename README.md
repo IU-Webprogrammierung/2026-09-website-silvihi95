@@ -274,6 +274,10 @@ Bei der Galerieerweiterung sollte das vorhandene Magazin-Layout erhalten bleiben
 
 
 
+Bei der Prüfung auf einem iPad zeigte sich, dass das Hintergrundbild in Safari anders dargestellt wurde als auf dem Desktop. Die Hintergrunddarstellung wurde deshalb mithilfe einer CSS-Anpassung für Safari korrigiert und anschließend direkt auf dem iPad getestet.
+
+
+
 Die Änderungen wurden schrittweise geprüft und mit Git dokumentiert.
 
 
@@ -308,7 +312,7 @@ Die Lightbox und die erweiterbaren Galerien kamen während der Entwicklung hinzu
 
 \- **\*\*Tastaturbedienung:\*\*** Prüfung der Navigation und interaktiven Elemente mit Tab, Enter und Escape. Dabei wurden die Erreichbarkeit der Bedienelemente, das Auslösen von Funktionen und das Schließen geöffneter Dialoge getestet.
 
-\- **\*\*VoiceOver:\*\*** Prüfung der Navigation, Bildbeschreibungen und interaktiven Elemente mit Apple VoiceOver in Google Chrome
+\- **VoiceOver:** Prüfung der Navigation, Bildbeschreibungen und interaktiven Elemente mit Apple VoiceOver in Google Chrome sowie auf einem iPad in Safari
 
 \- **\*\*Browserkonsole:\*\*** Kontrolle der veröffentlichten Website in Chrome. Bei der abschließenden Prüfung wurden keine Fehlermeldungen angezeigt
 
